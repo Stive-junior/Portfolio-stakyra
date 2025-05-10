@@ -5,6 +5,9 @@
 Voici le shema du projet :
 
 
+
+
+
 portfolio-stakyra/
 
 ├── index.html # Page d'accueil
