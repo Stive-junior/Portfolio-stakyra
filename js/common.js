@@ -4,18 +4,16 @@
  * @type {Object}
  */
 const PortfolioConfig = {
-
   isMobile: window.innerWidth < 992,
   isTouch: 'ontouchstart' in window,
   prefersDark: window.matchMedia('(prefers-color-scheme: dark)').matches,
-
 
   dom: {
     body: document.body,
     header: document.querySelector('.main-header'),
     burgerButton: document.querySelector('.burger-menu'),
     mobileMenu: document.querySelector('.mobile-menu'),
-    themeToggle: document.querySelector('#theme-toggle'),
+    themeToggles: document.querySelectorAll('.theme-toggle'), // Modifié pour gérer plusieurs boutons
     scrollToTop: document.querySelector('.scroll-to-top'),
     currentYear: document.querySelector('.current-year'),
     allAnimated: document.querySelectorAll('[data-animate]'),
@@ -25,24 +23,24 @@ const PortfolioConfig = {
     techIcons: document.querySelectorAll('.tech-icon'),
     galleryItems: document.querySelectorAll('.gallery-item'),
     scrollDown: document.querySelector('.scroll-down'),
-    heroSubtitle: document.querySelector('.hero-subtitle')
+    heroSubtitle: document.querySelector('.hero-subtitle'),
+    navLinks:document.querySelectorAll('.nav-link, .mobile-nav-link, .footer-link'),
   },
 
-  // États de l'application
   states: {
     menuOpen: false,
     darkMode: false,
     scrolled: false,
-    isTyping: false // État pour l'effet de frappe
+    isTyping: false,
+     currentSection: '',
+    currentPage: ''
   },
 
-  // LocalStorage keys
   storage: {
     theme: 'portfolio_theme_preference',
     visited: 'portfolio_first_visit'
   },
 
-  // Configuration de l'effet de frappe
   typing: {
     texts: [
       "Développeuse Full-Stack",
@@ -60,9 +58,8 @@ const PortfolioConfig = {
     initialDelay: 1500
   },
 
-  // Configuration de l'effet de parallaxe
   parallax: {
-    elements: [] // Sera rempli dans initParallaxEffect
+    elements: []
   }
 };
 
@@ -71,9 +68,6 @@ const PortfolioConfig = {
  */
 function initApp() {
   console.log('Initialisation de l\'application...');
-
-  // Vérifie la première visite
-  checkFirstVisit();
 
   // Initialise les fonctionnalités globales
   initThemeSystem();
@@ -84,6 +78,7 @@ function initApp() {
   initCurrentYear();
   initObservers();
   initAnalytics();
+  initActiveLinkObserver(); // Nouvelle fonction pour observer les sections
 
   // Initialise les fonctionnalités spécifiques à la page d'accueil
   if (PortfolioConfig.dom.heroSubtitle) {
@@ -101,10 +96,11 @@ function initApp() {
   if (PortfolioConfig.dom.heroSection) {
     initParallaxEffect();
   }
-  initRippleEffect(); // Initialisation globale de l'effet ripple
-
-  // Configure les écouteurs d'événements globaux
+  initRippleEffect();
   setupEventListeners();
+
+  // Met à jour les liens actifs au chargement
+  updateActiveLinks();
 
   console.log('Application initialisée.');
 }
@@ -121,10 +117,12 @@ function initThemeSystem() {
 
   applyTheme(PortfolioConfig.states.darkMode);
 
-  if (PortfolioConfig.dom.themeToggle) {
-    PortfolioConfig.dom.themeToggle.addEventListener('click', toggleTheme);
-    updateThemeIcon();
-  }
+  // Gestion de plusieurs boutons de thème
+  PortfolioConfig.dom.themeToggles.forEach(toggle => {
+    toggle.addEventListener('click', toggleTheme);
+  });
+
+  updateThemeIcons(); // Mise à jour de tous les icônes
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
     if (!localStorage.getItem(PortfolioConfig.storage.theme)) {
@@ -137,20 +135,113 @@ function applyTheme(isDark) {
   PortfolioConfig.states.darkMode = isDark;
   PortfolioConfig.dom.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
   localStorage.setItem(PortfolioConfig.storage.theme, isDark ? 'dark' : 'light');
-  updateThemeIcon();
+  updateThemeIcons();
 }
 
 function toggleTheme() {
   applyTheme(!PortfolioConfig.states.darkMode);
 }
 
-function updateThemeIcon() {
-  if (!PortfolioConfig.dom.themeToggle) return;
-  const icon = PortfolioConfig.dom.themeToggle.querySelector('i');
-  if (!icon) return;
-  icon.classList.toggle('fa-moon', !PortfolioConfig.states.darkMode);
-  icon.classList.toggle('fa-sun', PortfolioConfig.states.darkMode);
+function updateThemeIcons() {
+  PortfolioConfig.dom.themeToggles.forEach(toggle => {
+    const icon = toggle.querySelector('i');
+    if (!icon) return;
+    icon.classList.toggle('fa-moon', !PortfolioConfig.states.darkMode);
+    icon.classList.toggle('fa-sun', PortfolioConfig.states.darkMode);
+  });
 }
+
+
+
+
+/**
+ * SECTION: Gestion des liens actifs
+ * Met à jour les liens de navigation en fonction de la page actuelle
+ */
+function initActiveLinks() {
+  // Obtenir le chemin de la page actuelle
+  const currentPath = window.location.pathname;
+  // Extraire le nom du fichier ou utiliser 'index.html' si nous sommes à la racine
+  PortfolioConfig.states.currentPage = currentPath.split('/').pop() || 'index.html';
+  
+  // Mettre à jour les liens actifs selon la page actuelle
+  updateActiveLinks();
+  
+  // Si la page a des sections avec IDs, initialiser l'observateur pour la navigation intra-page
+  const sections = document.querySelectorAll('section[id]');
+  if (sections.length > 0) {
+    initActiveSectionObserver(sections);
+  }
+}
+
+/**
+ * Met à jour les liens de navigation en fonction de la page actuelle
+ */
+function updateActiveLinks() {
+  const currentPage = PortfolioConfig.states.currentPage;
+  
+  // Sélectionner tous les liens de navigation (desktop, mobile et footer)
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link, .footer-link');
+  
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    // Le lien est actif si son href correspond à la page actuelle
+    const isActive = linkPath === currentPage;
+    
+    // Ajouter ou supprimer la classe 'active'
+    link.classList.toggle('active', isActive);
+    
+    // Mettre à jour l'attribut aria-current pour l'accessibilité
+    link.setAttribute('aria-current', isActive ? 'page' : 'false');
+  });
+}
+
+/**
+ * Initialise l'observateur d'intersection pour les sections avec IDs
+ * @param {NodeList} sections - Liste des sections à observer
+ */
+function initActiveSectionObserver(sections) {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        PortfolioConfig.states.currentSection = entry.target.id;
+        // Pour une éventuelle mise en évidence des ancres internes
+        updateInternalAnchors();
+      }
+    });
+  }, options);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+}
+
+/**
+ * Met à jour les ancres internes en fonction de la section visible
+ * (utilisé pour les liens de navigation intra-page)
+ */
+function updateInternalAnchors() {
+  const currentSection = PortfolioConfig.states.currentSection;
+  if (!currentSection) return;
+  
+  const internalLinks = document.querySelectorAll('a[href^="#"]');
+  internalLinks.forEach(link => {
+    const linkHash = link.getAttribute('href');
+    // Vérifier si le lien pointe vers la section actuelle
+    const isActive = linkHash === `#${currentSection}`;
+    link.classList.toggle('active', isActive);
+  });
+}
+
+
+
+
 
 /**
  * SECTION: Menu Mobile
@@ -164,6 +255,8 @@ function initMobileMenu() {
     this.classList.toggle('active');
     PortfolioConfig.dom.mobileMenu.classList.toggle('active');
     PortfolioConfig.dom.body.classList.toggle('no-scroll', PortfolioConfig.states.menuOpen);
+    this.setAttribute('aria-expanded', PortfolioConfig.states.menuOpen);
+    
     this.querySelectorAll('.burger-line').forEach(line => {
       line.classList.toggle('active', PortfolioConfig.states.menuOpen);
     });
@@ -194,21 +287,19 @@ function initSmoothScrolling() {
       e.preventDefault();
       const target = document.querySelector(this.hash);
       if (!target) return;
+      
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
       if (history.pushState) {
         history.pushState(null, null, this.hash);
       } else {
         window.location.hash = this.hash;
       }
-      updateActiveNav(this.hash);
+      
+      // Mise à jour manuelle pour les cas où l'IntersectionObserver ne détecte pas le changement
+      PortfolioConfig.states.currentSection = this.hash.substring(1);
+      updateActiveLinks();
     });
-  });
-}
-
-function updateActiveNav(hash) {
-  document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
-    const linkPath = link.getAttribute('href');
-    link.classList.toggle('active', linkPath === hash);
   });
 }
 
@@ -318,25 +409,12 @@ function initObservers() {
 }
 
 /**
- * SECTION: Première Visite
- * Vérifie si c'est la première visite de l'utilisateur.
- */
-function checkFirstVisit() {
-  if (!localStorage.getItem(PortfolioConfig.storage.visited)) {
-    localStorage.setItem(PortfolioConfig.storage.visited, 'true');
-    console.log('Première visite détectée.');
-    // Ajouter ici toute logique spécifique à la première visite (ex: animation d'introduction)
-  }
-}
-
-/**
  * SECTION: Google Analytics
  * Initialise Google Analytics si la fonction gtag est définie.
  */
 function initAnalytics() {
   if (typeof gtag !== 'undefined') {
     console.log('Google Analytics initialisé.');
-    // Configuration supplémentaire de GA peut être ajoutée ici
   }
 }
 
@@ -407,7 +485,7 @@ function initTypingEffect() {
     } else {
       displayText = currentText.substring(0, PortfolioConfig.typing.charIndex + 1);
       PortfolioConfig.typing.charIndex++;
-      PortfolioConfig.typing.typingSpeed = PortfolioConfig.typing.charIndex % 3 === 0 ? 150 : 100; // Variation de vitesse
+      PortfolioConfig.typing.typingSpeed = PortfolioConfig.typing.charIndex % 3 === 0 ? 150 : 100;
     }
 
     PortfolioConfig.dom.heroSubtitle.textContent = displayText;
@@ -451,7 +529,7 @@ function initAvatarInteraction() {
     const centerY = rect.height / 2;
     const rotateY = (x - centerX) / 15;
     const rotateX = (centerY - y) / 15;
-    PortfolioConfig.dom.avatarContainer.style.transform = `rotateY(<span class="math-inline">\{rotateY\}deg\) rotateX\(</span>{rotateX}deg)`;
+    PortfolioConfig.dom.avatarContainer.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
     const glowX = (x / rect.width) * 100;
     const glowY = (y / rect.height) * 100;
     hoverEffect.style.background = `radial-gradient(circle at ${glowX}% ${glowY}%, rgba(71, 181, 255, 0.3), transparent)`;

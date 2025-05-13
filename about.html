@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Propos | Stakyra Morelle | Développeuse Full-Stack</title>
+    <title>À Propos </title>
     <meta name="description" content="En savoir plus sur Stakyra Morelle, son parcours, ses valeurs et sa passion pour le développement web.">
 
     <link rel="icon" href="images/img.png" type="image/png">
@@ -15,54 +15,81 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
+   
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
 
+
+    <div class="animated-background">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="gradient-globe"></div>
+    </div>
+
+
+
+    <!-- Header -->
     <header class="main-header">
+        
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <a href="index.html" id="logo" class="logo">
                 <span>Stakyra</span>
             </a>
-
-            <div class="header-controls">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+            
+       
+                       <nav class="main-nav">
+                <ul class="nav-links">
+                   <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Accueil</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i>À Propos</a></li>
+                <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
+                <li><a href="skills.html" class="nav-link"><i class="fas fa-code"></i>Compétences</a></li>
+                <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+                     <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
                     <i class="fas fa-moon"></i>
                 </button>
+                </ul>
+            </nav>
 
+
+            
+             
                 <button class="burger-menu" aria-label="Menu mobile" id="mobile-menu-toggle">
                     <span class="burger-line top"></span>
                     <span class="burger-line mid"></span>
                     <span class="burger-line bottom"></span>
                 </button>
-            </div>
+            
 
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li><a href="about.html" class="nav-link active">À Propos</a></li>
-                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
-                    <li><a href="projects.html" class="nav-link">Projets</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
         </div>
-
+        
+    
         <div class="mobile-menu" id="mobile-menu">
             <ul class="mobile-nav-links">
-                <li><a href="index.html" class="mobile-nav-link">Accueil</a></li>
-                <li><a href="about.html" class="mobile-nav-link active">À Propos</a></li>
-                <li><a href="skills.html" class="mobile-nav-link">Compétences</a></li>
-                <li><a href="projects.html" class="mobile-nav-link">Projets</a></li>
-                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-            </ul>
+            <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i>Accueil</a></li>
+            <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user"></i>À Propos</a></li>
+            <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
+            <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code"></i>Compétences</a></li>
+            <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
+            <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+
+            <button class="theme-toggle" aria-label="Changer de thème">
+                    <i class="fas fa-moon"></i> Theme
+                </button>
+        </ul>
         </div>
     </header>
 
+
     <main>
-        <section class="container mt-5">
+       
+            <section class="hero-section" id="hero">
+                 <div class="container hero-container">
             <h1 class="text-center mb-4">À Propos de Moi</h1>
+            </div>
+
             </section>
     </main>
 
@@ -77,12 +104,13 @@
                 <div class="footer-col">
                     <h3>Navigation</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html" class="footer-link">Accueil</a></li>
-                        <li><a href="about.html" class="footer-link">À Propos</a></li>
-                        <li><a href="skills.html" class="footer-link">Compétences</a></li>
-                        <li><a href="projects.html" class="footer-link">Projets</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                    </ul>
+    <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i>Accueil</a></li>
+    <li><a href="about.html" class="footer-link"><i class="fas fa-user"></i>À Propos</a></li>
+    <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart"></i>Hobbies</a></li>
+    <li><a href="skills.html" class="footer-link"><i class="fas fa-code"></i>Compétences</a></li>
+    <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase"></i>Projets</a></li>
+    <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope"></i>Contact</a></li>
+</ul>
                 </div>
 
                 <div class="footer-col">
@@ -121,6 +149,8 @@
     </a>
 
     <script src="js/common.js"></script>
-    <script src="js/"
+    <script src="js/adout.js"></script>
+
+
 </body>
 </html>
