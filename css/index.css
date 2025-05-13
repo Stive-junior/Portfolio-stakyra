@@ -204,7 +204,7 @@
 }
 
 .section-subtitle {
-  color: var(--dark-gray);
+  color: var(--dark);
   max-width: 700px;
   margin: 0 auto;
 }
