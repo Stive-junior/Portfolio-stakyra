@@ -1,375 +1,329 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #00f7ff;
-            --secondary: #ff00e4;
-            --dark: #0a0a14;
-            --light: #e0e0ff;
-            --glow: 0 0 10px var(--primary), 0 0 20px var(--primary);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        @font-face {
-            font-family: 'Orbitron';
-            src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-        }
-
-        body {
-            background-color: var(--dark);
-            color: var(--light);
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(0, 247, 255, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 80% 70%, rgba(255, 0, 228, 0.1) 0%, transparent 20%);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            padding: 30px 0;
-            position: relative;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: var(--glow);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-size: 1.1rem;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-            text-shadow: var(--glow);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-
-        .hero {
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 700;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--glow);
-        }
-
-        .btn:hover {
-            background: var(--primary);
-            color: var(--dark);
-            box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
-        }
-
-        .hero-image {
-            position: absolute;
-            right: 5%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 500px;
-            height: 500px;
-            background-image: url('images/img.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.8;
-            filter: drop-shadow(0 0 20px var(--primary));
-            animation: float 6s ease-in-out infinite;
-        }
-
-        
-        .grid-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(rgba(10, 10, 20, 0.9) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(10, 10, 20, 0.9) 1px, transparent 1px);
-            background-size: 50px 50px;
-            z-index: -1;
-        }
-
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            background: var(--primary);
-            border-radius: 50%;
-            filter: blur(1px);
-            opacity: 0.7;
-        }
-
-        .hero-content, .btn {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(-50%) translateX(0);
-            }
-            50% {
-                transform: translateY(-50%) translateX(20px);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 0.5;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
-
+    <title>Stakyra Morelle | Développeuse Full-Stack</title>
+    <meta name="description" content="Portfolio de Stakyra Morelle, Développeuse Full-Stack spécialisée en React et Node.js">
     
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-            .hero-image {
-                width: 400px;
-                height: 400px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 100px;
-                height: auto;
-            }
-            .hero-content {
-                margin-bottom: 50px;
-            }
-            .hero-image {
-                position: relative;
-                transform: none;
-                margin: 0 auto;
-                width: 300px;
-                height: 300px;
-            }
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+    <!-- Favicon -->
+    <link rel="icon" href="images/img.png" type="image/png">
+    <link rel="apple-touch-icon" href="media/images/general/apple-touch-icon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div class="grid-bg"></div>
-    <div class="particles" id="particles"></div>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">PORT-folio</div>
-                <div class="nav-links">
-                    <a href="#about">À Propos</a>
-                    <a href="#work">Projets</a>
-                    <a href="#skills">Compétences</a>
-                    <a href="#contact">Contact</a>
-                </div>
+    <div class="animated-background">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="gradient-globe"></div>
+    </div>
+
+
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span>Je t'aime</span>
+            </a>
+            
+            <div class="header-controls">
+               
+                
+                <!-- Menu Burger -->
+                <button class="burger-menu" aria-label="Menu mobile" id="mobile-menu-toggle">
+                    <span class="burger-line top"></span>
+                    <span class="burger-line mid"></span>
+                    <span class="burger-line bottom"></span>
+                </button>
+            </div>
+
+            <!-- Navigation Desktop -->
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link">Projets</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+
+                     <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                </ul>
             </nav>
+        </div>
+        
+    
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-link active">Accueil</a></li>
+                <li><a href="about.html" class="mobile-nav-link">À Propos</a></li>
+                <li><a href="skills.html" class="mobile-nav-link">Compétences</a></li>
+                <li><a href="projects.html" class="mobile-nav-link">Projets</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Mategne Chendjou Stakyra Morelle </h1>
-                <h1>i love you too </h1>
-                (je t'aime tellement)
-                <p>Bienvenue sur mon portfolio</p>
-                <a href="#contact" class="btn">Me contacter</a>
+    <main>
+        
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content" data-animate="fadeInUp">
+                    <h1 class="hero-title">Stakyra Morelle</h1>
+                    <h2 class="hero-subtitle"></h2>
+                    <p class="hero-description">
+                        Créatrice d'expériences digitales mémorables combinant design élégant et performances techniques.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn btn-primary btn-icon">
+                            <i class="fas fa-paper-plane"></i> Me Contacter
+                        </a>
+                        <a href="projects.html" class="btn btn-outline btn-icon">
+                            <i class="fas fa-code"></i> Mes Projets
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="avatar-container">
+                        <img src="images/img.png" alt="Photo de Stakyra Morelle" class="avatar-image">
+                    </div>
+                    <div class="tech-stack">
+                        <i class="tech-icon fab fa-react" style="color: #61DAFB;" data-tooltip="React"></i>
+                        <i class="tech-icon fab fa-node-js" style="color: #68A063;" data-tooltip="Node.js"></i>
+                        <i class="tech-icon fab fa-js" style="color: #F7DF1E;" data-tooltip="JavaScript"></i>
+                        <i class="tech-icon fab fa-html5" style="color: #E34F26;" data-tooltip="HTML5"></i>
+                        <i class="tech-icon fab fa-css3-alt" style="color: #1572B6;" data-tooltip="CSS3"></i>
+                        <i class="tech-icon fab fa-git-alt" style="color: #F05032;" data-tooltip="Git"></i>
+                    </div>
+                </div>
             </div>
-            <div class="hero-image"></div>
-        </div>
-    </section>
+            
+            <a href="#gal" class="scroll-down">
+                <span class="scroll-down-text">Découvrir</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </section>
 
-    <section class="hero-content">
-        <h2>Mes projets</h2>
-        <p>Voici quelques réalisations récentes...</p>
-    </section>
+        <div id="gal" style="margin-bottom: 30px;"></div>
+
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mes Réalisations</h2>
+                    <p class="section-subtitle">
+                        Une sélection de mes projets récents combinant créativité et expertise technique.
+                    </p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <!-- Projet 1 -->
+                    <div class="gallery-item card" data-animate="fadeInUp">
+                        <img src="images/img.jpg" alt="Projet E-commerce" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Full-Stack</span>
+                            <h3 class="gallery-title">Plateforme E-commerce</h3>
+                            <p>je t'aime</p>
+                            <a href="projects.html#projet1" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 2 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.2s">
+                        <img src="images/img.jpg" alt="Application Mobile" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Mobile</span>
+                            <h3 class="gallery-title">Application Fitness</h3>
+                            <p>je t'aime</p>
+                            <a href="projects.html#projet2" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 3 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
+                        <img src="images/img.jpg" alt="Dashboard Analytics" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">DataViz</span>
+                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <p>je t'aime</p>
+                            <a href="projects.html#projet3" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+
+                    <!-- Projet 4 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
+                        <img src="images/img.jpg" alt="Dashboard Analytics" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">DataViz</span>
+                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <p>je t'aime</p>
+                            <a href="projects.html#projet3" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+
+                    <!-- Projet 1 -->
+                    <div class="gallery-item card" data-animate="fadeInUp">
+                        <img src="images/img.jpg" alt="Projet E-commerce" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Full-Stack</span>
+                            <h3 class="gallery-title">Plateforme E-commerce</h3>
+                            <p>je t'aime</p>
+                            <a href="projects.html#projet1" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 2 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.2s">
+                        <img src="images/img.jpg" alt="Application Mobile" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Mobile</span>
+                            <h3 class="gallery-title">Application Fitness</h3>
+                            <p>je t'aime</p>
+                            <a href="projects.html#projet2" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 3 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
+                        <img src="images/img.jpg" alt="Dashboard Analytics" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">DataViz</span>
+                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <p>je t'aime</p>
+                            <a href="projects.html#projet3" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+
+                    <!-- Projet 4 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
+                        <img src="images/img.jpg" alt="Dashboard Analytics" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">DataViz</span>
+                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <p>je t'aime</p>
+                            <a href="projects.html#projet3" class="btn btn-outline btn-sm">Voir plus</a>
+                        </div>
+                    </div>
+
+
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="projects.html" class="btn btn-primary btn-icon">
+                        <i class="fas fa-arrow-right"></i> Voir tous mes projets
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">Stakyra</div>
+                    <p>Développeuse Full-Stack passionnée par la création d'expériences web exceptionnelles.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Accueil</a></li>
+                        <li><a href="about.html" class="footer-link">À Propos</a></li>
+                        <li><a href="skills.html" class="footer-link">Compétences</a></li>
+                        <li><a href="projects.html" class="footer-link">Projets</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Réseaux</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@stakyra.dev" class="footer-link">contact@stakyra.dev</a></li>
+                        <li><a href="tel:+237612345678" class="footer-link">+237 6 12 34 56 78</a></li>
+                        <li>Yaoundé, Cameroun</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span class="current-year"></span> Stakyra Morelle. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton Retour en haut -->
+    <a href="#hero" class="scroll-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
 
     <script>
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const particlesContainer = document.querySelector('.particles');
-            const particleCount = 50;
-
-
-
-            for (let i = 0; i < particleCount; i++) {
-
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-            
-                const posX = Math.random() * 100;
-                const posY = Math.random() * 100;
-                
-    
-                const size = Math.random() * 5 + 1;
-                
-    
-                const duration = Math.random() * 20 + 10;
-                const delay = Math.random() * 10;
-                
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-
-                particle.style.left = `${posX}%`;
-                particle.style.top = `${posY}%`;
-
-                particle.style.animation = `pulse ${duration}s ease-in-out ${delay}s infinite`;
-                
-                particlesContainer.appendChild(particle);
-            }
-
-    
-            const heroTitle = document.querySelector('.hero h1');
-            const text = heroTitle.textContent;
-            heroTitle.textContent = '';
-            
-            let i = 0;
-            const typingEffect = setInterval(() => {
-                if (i < text.length) {
-                    heroTitle.textContent += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(typingEffect);
-                }
-            }, 100);
+        // Gestion du menu burger
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('mobile-menu').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
         });
 
-
-        window.addEventListener('mousemove', function(e) {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            const heroImage = document.querySelector('.hero-image');
-            heroImage.style.transform = `translateY(-50%) translateX(${x * 30 - 15}px) translateY(${y * 30 - 15}px)`;
-        });
-
-
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu-toggle').click();
             });
-        }, observerOptions);
+        });
 
-        document.querySelectorAll('.hero-content, .btn').forEach(el => {
-            observer.observe(el);
+        // Gestion du thème
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+
+        document.body.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+           
+            themeToggle.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                themeToggle.style.transform = 'scale(1)';
+            }, 300);
         });
     </script>
 </body>
