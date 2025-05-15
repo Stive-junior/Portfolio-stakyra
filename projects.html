@@ -79,8 +79,132 @@
     <main>
         <section class="container mt-5">
             <h1 class="text-center mb-4">Mes Projets</h1>
-            </section>
+            <section class="gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mes Réalisations</h2>
+                    <p class="section-subtitle">
+                        Une sélection de mes projets récents combinant créativité et expertise technique.
+                    </p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <!-- Projet 1 -->
+                    <div class="gallery-item card" data-animate="fadeInUp">
+                        <img src="images/img2.png" alt="Projet E-commerce" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Full-Stack</span>
+                            <h3 class="gallery-title">Plateforme E-commerce</h3>
+                            <p>Stakyra</p>
+                            <a href="projects.html#projet1"></a>
+                        </div>
+                    </div><button class="btn-primary1">
+                        ↓ En savoir plus
+                    </button>
+                    
+                    <!-- Projet 2 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.2s">
+                        <img src="images/fitness-app.png" alt="Application Mobile" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Mobile</span>
+                            <h3 class="gallery-title">Application Fitness</h3>
+                            <p>Stakyra</p>
+                            <a href="projects.html#projet2"></a>
+                        </div>
+                    </div><button class="btn-primary1">
+                        ↓ En savoir plus
+                    </button>
+                    
+                    <!-- Projet 3 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
+                        <img src="images/img3.png" alt="Dashboard Analytics" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">DataViz</span>
+                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <p>Stakyra</p>
+                            <a href="projects.html#projet3"></a>
+                        </div>
+                    </div><button class="btn-primary1">
+                        ↓ En savoir plus
+                    </button>
+
+                    <!-- Projet 4 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
+                        <img src="images/img8.png" alt="Dashboard Analytics" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">DataViz</span>
+                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <p>Stakyra</p>
+                            <a href="projects.html#projet3"></a>
+                        </div>
+                    </div>
+                        <button class="btn-primary1">
+                            ↓ En savoir plus
+                        </button>
+
+                    <!-- Projet 1 -->
+                    <div class="gallery-item card" data-animate="fadeInUp">
+                        <img src="images/img6.png" alt="Projet E-commerce" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Full-Stack</span>
+                            <h3 class="gallery-title">Plateforme E-commerce</h3>
+                            <p>Stakyra</p>
+                            <a href="projects.html#projet1"></a>
+                        </div>
+                    </div><button class="btn-primary1">
+                            ↓ En savoir plus
+                        </button>
+                    
+                    <!-- Projet 2 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.2s">
+                        <img src="images/img5.png" alt="Application Mobile" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Mobile</span>
+                            <h3 class="gallery-title">Application Fitness</h3>
+                            <p>Stakyra</p>
+                            <a href="projects.html#projet2"></a>
+                        </div>
+                    </div><button class="btn-primary1"> 
+                        ↓ En savoir plus
+                    </button>
+                    
+                    <!-- Projet 3 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
+                        <img src="images/img4.png" alt="Dashboard Analytics" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">DataViz</span>
+                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <p>Stakyra</p>
+                            <a href="projects.html#projet3"></a>
+                        </div>
+                    </div><button class="btn-primary1">
+                        ↓ En savoir plus
+
+                    </button>
+
+                    <!-- Projet 4 -->
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
+                        <img src="images/img9.png" alt="Dashboard Analytics" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">DataViz</span>
+                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <p>Stakyra</p>
+                            <a href="projects.html#projet3"></a>
+                        </div>
+                    </div><button class="btn-primary1">
+                        ↓ En savoir plus
+                        </button>
+
+
+                </div>
+                
+                <div class="text-center mt-5">
+                    
+                </div>
+            </div>
+        </section>
     </main>
+    
 
     <footer class="main-footer">
         <div class="container">
@@ -137,6 +261,39 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <script src="js/common.js"></script>
+    <script src="js/common.js">
+        // Gestion du menu burger
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('mobile-menu').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu-toggle').click();
+            });
+        });
+
+        // Gestion du thème
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+
+        document.body.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+        
+            themeToggle.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                themeToggle.style.transform = 'scale(1)';
+            }, 300);
+        });
+
+    </script>
 </body>
 </html>
