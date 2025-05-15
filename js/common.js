@@ -25,6 +25,9 @@ const PortfolioConfig = {
     scrollDown: document.querySelector('.scroll-down'),
     heroSubtitle: document.querySelector('.hero-subtitle'),
     navLinks:document.querySelectorAll('.nav-link, .mobile-nav-link, .footer-link'),
+    contactForm: document.querySelector('#contactForm'),
+    formMessage: document.querySelector('#formMessage'),
+
   },
 
   states: {
