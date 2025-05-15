@@ -5,6 +5,12 @@ body {
     line-height: 1.6;
 }
 
+/* Navigation */
+nav a {
+    margin: 0 15px;
+    padding: 8px 12px;
+}
+
 /* Contenu principal */
 main {
     padding: 40px 20px;

@@ -1,5 +1,11 @@
 /* ===== INDEX.CSS - PAGE D'ACCUEIL - OPTIMISÉ ===== */
 
+/* Navigation */
+nav a {
+    margin: 0 15px;
+    padding: 8px 12px;
+}
+
 /* Section Hero */
 .hero-section {
   position: relative;
