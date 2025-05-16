@@ -19,6 +19,38 @@ nav a {
     transition: var(--transition-normal); 
     margin: 5%;
     padding: 2%;
-    width: 1500px;
-    height: 250px;
+    width: 750px;
+    height: 400px;
+}
+
+.text{
+    font-size: 2em;
+}
+
+.card1{
+    background: var(--white); 
+    border-radius: var(--border-radius-md); 
+    box-shadow: var(--box-shadow-sm); 
+    overflow: hidden; 
+    transition: var(--transition-normal);
+    margin: 5%;
+    padding: 2%;
+    width: 750px;
+    height: 400px;
+}
+
+.card2{
+    background: var(--white); 
+    border-radius: var(--border-radius-md); 
+    box-shadow: var(--box-shadow-sm); 
+    overflow: hidden; 
+    transition: var(--transition-normal);
+    margin: 5%;
+    padding: 2%;
+    width: 750px;
+    height: 400px;
+}
+
+.position{
+    display: flex;
 }
