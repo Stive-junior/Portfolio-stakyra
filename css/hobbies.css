@@ -1,9 +1,35 @@
 /* Style général */
-body {
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
+body[data-theme="light"] {
+  --primary: #4361ee;
+  --primary-rgb: 67, 97, 238;
+  --dark: #f8f9fa;
+  --dark-rgb: 248, 249, 250;
+  --darker: #e9ecef;
+  --darker-rgb: 233, 236, 239;
+  --light: #14213d;
+  --light-rgb: 20, 33, 61;
+  --text-color: var(--dark);
+  --background-color: var(--light);
+  --border-color: var(--light-gray);
 }
+
+body[data-theme="dark"] {
+  --primary: #64b5f6;
+  --primary-rgb: 100, 181, 246;
+  --dark: #14213d;
+  --dark-rgb: 20, 33, 61;
+  --darker: #0d1b2a;
+  --darker-rgb: 13, 27, 42;
+  --light: #f8f9fa;
+  --light-rgb: 248, 249, 250;
+  --light-gray: #373737;
+  --light-gray-rgb: 55, 55, 55;
+  --text-color: var(--light);
+  --background-color: var(--darker);
+  --border-color: var(--dark-gray);
+  
+}
+
 
 /* Navigation */
 nav a {
