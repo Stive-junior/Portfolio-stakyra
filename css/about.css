@@ -11,6 +11,7 @@ body[data-theme="light"] {
   --text-color: var(--dark);
   --background-color: var(--light);
   --border-color: var(--light-gray);
+  color: var(--secondary);
 }
 
 body[data-theme="dark"] {
@@ -43,9 +44,9 @@ nav a {
     overflow: hidden; 
     transition: var(--transition-normal); 
     margin: 5%;
-    padding: 2%;
+    padding: 5%;
     width: 750px;
-    height: 400px;
+    height: 450px;
 }
 
 .text{
@@ -89,7 +90,7 @@ nav a {
 /* Style texte (réutilise ta classe .card) */
 .about-text.card {
     background: #fff;
-    padding: 20px;
+    padding: 50px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
