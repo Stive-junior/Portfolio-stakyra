@@ -1,15 +1,4 @@
-/* Style général */
-body {
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-}
 
-/* Navigation */
-nav a {
-    margin: 0 15px;
-    padding: 8px 12px;
-}
 
 .card { 
     background: var(--white); 
