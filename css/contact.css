@@ -11,7 +11,7 @@ body[data-theme="light"] {
   --text-color: var(--dark);
   --background-color: var(--light);
   --border-color: var(--light-gray);
-  color: var(--secondary);
+  color: white;
 }
 
 body[data-theme="dark"] {

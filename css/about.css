@@ -46,11 +46,12 @@ nav a {
     margin: 5%;
     padding: 5%;
     width: 750px;
-    height: 450px;
+    height: 500px;
 }
 
 .text{
     font-size: 2em;
+    color: #373737;
 }
 
 .about-row {
