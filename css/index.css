@@ -277,7 +277,7 @@ nav a {
   margin-bottom: var(--space-sm);
 }
 
-/* Préchargeur */
+/* Préchargeur (styles existants, laissés pour référence si un preloader est ajouté plus tard) */
 .preloader.fade-out {
   opacity: 0;
 }

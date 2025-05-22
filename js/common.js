@@ -81,7 +81,7 @@ function initApp() {
   initCurrentYear();
   initObservers();
   initAnalytics();
-  initActiveLinkObserver(); // Nouvelle fonction pour observer les sections
+initActiveLinks();
 
   // Initialise les fonctionnalités spécifiques à la page d'accueil
   if (PortfolioConfig.dom.heroSubtitle) {
@@ -106,6 +106,28 @@ function initApp() {
   updateActiveLinks();
 
   console.log('Application initialisée.');
+}
+
+
+
+/**
+ * SECTION: Gestion des liens actifs
+ * Met à jour les liens de navigation en fonction de la page actuelle
+ */
+function initActiveLinks() {
+  // Obtenir le chemin de la page actuelle
+  const currentPath = window.location.pathname;
+  // Extraire le nom du fichier ou utiliser 'index.html' si nous sommes à la racine
+  PortfolioConfig.states.currentPage = currentPath.split('/').pop() || 'index.html';
+  
+  // Mettre à jour les liens actifs selon la page actuelle
+  updateActiveLinks();
+  
+  // Si la page a des sections avec IDs, initialiser l'observateur pour la navigation intra-page
+  const sections = document.querySelectorAll('section[id]');
+  if (sections.length > 0) {
+    initActiveSectionObserver(sections);
+  }
 }
 
 /**

@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact </title>
+    <title>Contactez Stakyra Morelle</title>
     <meta name="description" content="Contactez Stakyra Morelle pour discuter de projets web, d'opportunités ou simplement pour échanger.">
 
     <link rel="icon" href="images/img.png" type="image/png">
-    <link rel="apple-touch-icon" href="media/images/general/apple-touch-icon.png">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +18,7 @@
 </head>
 <body>
 
-      <div class="animated-background">
+      <div class="animated-background" aria-hidden="true">
         <div class="stars"></div>
         <div class="twinkling"></div>
         <div class="gradient-globe"></div>
@@ -28,91 +26,114 @@
 
     <header class="main-header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="Accueil Stakyra">
                 <span>Stakyra</span>
             </a>
 
-            
-
-                    <nav class="main-nav">
+            <nav class="main-nav" aria-label="Navigation principale">
                 <ul class="nav-links">
-                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-                <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-                <li><a href="skills.html" class="nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-                <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+                <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+                <li><a href="skills.html" class="nav-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+                <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
+                    <button class="theme-toggle" aria-label="Changer de thème">
                     <i class="fas fa-moon"></i>
                 </button>
                 </ul>
             </nav>
 
-
-            
-            
-                <button class="burger-menu" aria-label="Menu mobile" id="mobile-menu-toggle">
+                <button class="burger-menu" aria-label="Menu mobile" aria-expanded="false">
                     <span class="burger-line top"></span>
                     <span class="burger-line mid"></span>
                     <span class="burger-line bottom"></span>
                 </button>
-            
         </div>
 
-        <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu">
             <ul class="mobile-nav-links">
-            <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-            <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-            <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-            <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-            <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-            <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+            <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+            <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+            <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+            <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+            <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+            <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
 
             <button class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-moon"></i> Theme
+                    <i class="fas fa-moon"></i> Thème
                 </button>
         </ul>
         </div>
     </header>
 
     <main>
-        <section class="container mt-5">
-            <h1 class="text-center mb-4"><i class="fas fa-phone"></i> _Contactez-moi</h1>
+        <section class="hero-section">
+            <div class="container hero-container">
+                <h1 class="text-center mb-4"></h1>
+                
+            </div>
+        </section>
 
-
-            <h4 class="text-center mb-4">-- Disponible pour toutes opportunites --</h4>
-            <div class="form-header">
-
-            <h3><i class="fas fa-paper-plane"></i>  Envoyez un message</h3>
-
-
-            <div class="container mt-5 animate animate-slide-in-left">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label class="form-label" for="name">Nom</label>
-                        <input type="text" id="name" class="form-control"/>
+        <section class="contact-section container" data-animate="fade-in-up">
+            <div class="contact-content-grid">
+                <div class="contact-info card neon-border-tertiary" data-animate="slide-in-left">
+                    <h2 class="section-title"><i class="fas fa-info-circle" aria-hidden="true"></i> Informations de Contact</h2>
+                    <ul>
+                        <li><i class="fas fa-envelope highlight" aria-hidden="true"></i> <a href="mailto:stakyramategne@gmail.com">stakyramategne@gmail.com</a></li>
+                        <li><i class="fas fa-phone highlight" aria-hidden="true"></i> <a href="tel:+33612345678">+33 6 12 34 56 78</a></li>
+                        <li><i class="fas fa-map-marker-alt highlight" aria-hidden="true"></i> ANGERS - FRANCE</li>
+                    </ul>
+                    <div class="social-links-contact">
+                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" for="email">Email</label>
-                        <input type="email" id="email" class="form-control"/>
+
+                 
+                    <div class="avata-container">
+                        <img src="images/img1.png" alt="Photo de Stakyra Morelle" class="avatar-image">
                     </div>
-                    <div>
-                        <label class="form-label" for="subject">Objet</label>
-                        <select id="subject" class="form-control">
-                            <option value="">-- Choisissez un objet --</option>
-                            <option value="collaboration">Demande de collaboration</option>
-                            <option value="stage">Demande de stage</option>
-                            <option value="work">Proposition d'emploi</option>
-                            <option value="autre">Autre (precisez dans le message)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="message">Message</label>
-                        <textarea id="message" rows="5" class="form-control"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
-                </form>
-                <p id="formMessage" class="mt-3 text-primary"></p>
+             
+
+
+                </div>
+
+                <div class="contact-form-container card neon-border-secondary" data-animate="slide-in-right">
+                    <h2 class="section-title"><i class="fas fa-paper-plane" aria-hidden="true"></i> Envoyez un message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nom</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom complet" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="votre.email@example.com" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Objet</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="">-- Choisissez un objet --</option>
+                                <option value="collaboration">Demande de collaboration</option>
+                                <option value="stage">Demande de stage</option>
+                                <option value="work">Proposition d'emploi</option>
+                                <option value="autre">Autre (précisez dans le message)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" class="form-control" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">Envoyer</button>
+                    </form>
+                    <p id="formMessage" class="mt-3 form-status-message"></p>
+                </div>
             </div>
         </section>
     </main>
@@ -128,37 +149,35 @@
                 <div class="footer-col">
                     <h3>Navigation</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i>Accueil</a></li>
-                        <li><a href="about.html" class="footer-link"><i class="fas fa-user"></i>À Propos</a></li>
-                        <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-                        <li><a href="skills.html" class="footer-link"><i class="fas fa-code"></i>Compétences</a></li>
-                        <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-                        <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope"></i>Contact</a></li>
+                        <li><a href="index.html" class="footer-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+                        <li><a href="about.html" class="footer-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+                        <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+                        <li><a href="skills.html" class="footer-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+                        <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
                     </ul>
                 </div>
-                
 
                 <div class="footer-col">
                     <h3>Réseaux</h3>
                     <div class="social-links">
-                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-github"></i>
+                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
                         </a>
-                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                         </a>
-                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
-                
 
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><a href="mailto:contact@stakyra.dev" class="footer-link">stakyramategne@gmail.com</a></li>
-                        <li><a href="tel:+237612345678" class="footer-link">+33 6 12 34 56 78</a></li>
+                        <li><a href="mailto:stakyramategne@gmail.com" class="footer-link">stakyramategne@gmail.com</a></li>
+                        <li><a href="tel:+33612345678" class="footer-link">+33 6 12 34 56 78</a></li>
                         <li>ANGERS - FRANCE</li>
                     </ul>
                 </div>
@@ -171,42 +190,9 @@
     </footer>
 
     <a href="#" class="scroll-to-top" aria-label="Retour en haut">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </a>
 
     <script src="js/common.js"></script>
-    <script>
-
-        function initContactForm() {
-            const form = PortfolioConfig.dom.contactForm;
-            const messageEl = PortfolioConfig.dom.formMessage;
-
-            if (!form || !messageEl) return;
-
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                const name = form.querySelector('#name').value.trim();
-                const email = form.querySelector('#email').value.trim();
-                const subject = form.querySelector('#subject').value.trim();
-                const message = form.querySelector('#message').value.trim();
-
-                if (!name || !email || !message) {
-                    messageEl.textContent = "Veuillez remplir tous les champs.";
-                    messageEl.classList.remove('text-success');
-                    messageEl.classList.add('text-danger');
-                    return;
-                }
-
-                messageEl.textContent = "Formulaire envoyé avec succès !";
-                messageEl.classList.remove('text-danger');
-                messageEl.classList.add('text-success');
-
-                form.reset();
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', initContactForm);
-
-    </script>
+    <script src="js/contact.js"></script> </body>
 </html>

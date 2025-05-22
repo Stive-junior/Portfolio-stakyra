@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compétences</title>
-    <meta name="description" content="Découvrez les compétences techniques et les outils maîtrisés par Stakyra Morelle en développement web.">
+    <title>Compétences - Stakyra Morelle</title>
+    <meta name="description" content="Découvrez les compétences techniques et comportementales de Stakyra Morelle, étudiante en informatique à Angers.">
 
     <link rel="icon" href="images/img.png" type="image/png">
-    <link rel="apple-touch-icon" href="media/images/general/apple-touch-icon.png">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -19,66 +16,214 @@
     <link rel="stylesheet" href="css/skills.css">
 </head>
 <body>
-
-      <div class="animated-background">
-        <div class="stars"></div>
-        <div class="twinkling"></div>
-        <div class="gradient-globe"></div>
-    </div>
-
-
     <header class="main-header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="Accueil Stakyra">
                 <span>Stakyra</span>
             </a>
-
-                    <nav class="main-nav">
+            <nav class="main-nav" aria-label="Navigation principale">
                 <ul class="nav-links">
-                   <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-                <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-                <li><a href="skills.html" class="nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-                <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-                     <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-moon"></i>
-                </button>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> À Propos</a></li>
+                    <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i> Hobbies</a></li>
+                    <li><a href="skills.html" class="nav-link"><i class="fas fa-code"></i> Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i> Projets</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><button class="theme-toggle" aria-label="Changer de thème"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </nav>
-
-
-            
-             
-                <button class="burger-menu" aria-label="Menu mobile" id="mobile-menu-toggle">
-                    <span class="burger-line top"></span>
-                    <span class="burger-line mid"></span>
-                    <span class="burger-line bottom"></span>
-                </button>
-             
-        
+            <button class="burger-menu" aria-label="Menu mobile" aria-expanded="false">
+                <span class="burger-line top"></span>
+                <span class="burger-line mid"></span>
+                <span class="burger-line bottom"></span>
+            </button>
         </div>
-
-        <div class="mobile-menu" id="mobile-menu">
-           <ul class="mobile-nav-links">
-            <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-            <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-            <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-            <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-            <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-            <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-            <button class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-moon"></i> Theme
-                </button>
-        </ul>
+        <div class="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user"></i> À Propos</a></li>
+                <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart"></i> Hobbies</a></li>
+                <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code"></i> Compétences</a></li>
+                <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase"></i> Projets</a></li>
+                <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><button class="theme-toggle" aria-label="Changer de thème"><i class="fas fa-moon"></i> Thème</button></li>
+            </ul>
         </div>
     </header>
 
     <main>
-        <section class="container mt-5">
-            <h1 class="text-center mb-4">Mes Compétences</h1>
-            </section>
+        <section class="hero-section">
+            <div class="container hero-container">
+                <h1 class="mt-"></h1>
+            </div>
+        </section>
+
+        <section class="skills-section container" data-animate="fade-in-up">
+            <h2 class="section-title"><i class="fas fa-code"></i> Compétences Techniques</h2>
+            <p class="section-description">Maîtrise des bases du développement web et initiation à la programmation.</p>
+            <div class="skills-grid">
+                <div class="skill-category" data-animate="zoom-in" data-animate-delay="0">
+                    <h3 class="category-title"><i class="fas fa-desktop"></i> Frontend</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <i class="fab fa-html5 skill-icon html-icon"></i>
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-circle" data-percentage="75">75%</div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fab fa-css3-alt skill-icon css-icon"></i>
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-circle" data-percentage="70">70%</div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fab fa-js-square skill-icon js-icon"></i>
+                            <span class="skill-name">JavaScript (Bases)</span>
+                            <div class="skill-circle" data-percentage="50">50%</div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-mobile-alt skill-icon responsive-icon"></i>
+                            <span class="skill-name">Responsive Design</span>
+                            <div class="skill-circle" data-percentage="65">65%</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category" data-animate="zoom-in" data-animate-delay="100">
+                    <h3 class="category-title"><i class="fas fa-database"></i> Backend & Base de Données</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <i class="fas fa-terminal skill-icon python-icon"></i>
+                            <span class="skill-name">Python (Bases)</span>
+                            <div class="skill-circle" data-percentage="30">30%</div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-server skill-icon server-icon"></i>
+                            <span class="skill-name">Concepts Serveur</span>
+                            <div class="skill-circle" data-percentage="40">40%</div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-database skill-icon sql-icon"></i>
+                            <span class="skill-name">SQL (Bases)</span>
+                            <div class="skill-circle" data-percentage="35">35%</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category" data-animate="zoom-in" data-animate-delay="200">
+                    <h3 class="category-title"><i class="fas fa-tools"></i> Outils & Versionnement</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <i class="fab fa-git-alt skill-icon git-icon"></i>
+                            <span class="skill-name">Git</span>
+                            <div class="skill-circle" data-percentage="80">80%</div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fab fa-github skill-icon github-icon"></i>
+                            <span class="skill-name">GitHub</span>
+                            <div class="skill-circle" data-percentage="75">75%</div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-code skill-icon vscode-icon"></i>
+                            <span class="skill-name">VS Code</span>
+                            <div class="skill-circle" data-percentage="90">90%</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category" data-animate="zoom-in" data-animate-delay="300">
+                    <h3 class="category-title"><i class="fas fa-flask"></i> Concepts Fondamentaux</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <i class="fas fa-superscript skill-icon math-icon"></i>
+                            <span class="skill-name">Logique & Algorithmique</span>
+                            <div class="skill-circle" data-percentage="85">85%</div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-lightbulb skill-icon problem-solving-icon"></i>
+                            <span class="skill-name">Résolution de Problèmes</span>
+                            <div class="skill-circle" data-percentage="75">75%</div>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-chart-line skill-icon analysis-icon"></i>
+                            <span class="skill-name">Analyse Scientifique</span>
+                            <div class="skill-circle" data-percentage="90">90%</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="behavioral-skills-section container" data-animate="fade-in-up">
+            <h2 class="section-title"><i class="fas fa-users"></i> Compétences Comportementales</h2>
+            <p class="section-description">Qualités humaines pour le travail en équipe et l’apprentissage.</p>
+            <div class="behavioral-skills-grid">
+                <div class="behavioral-card" data-animate="fade-in" data-animate-delay="0" role="button" aria-label="Curiosité & Proactivité">
+                    <div class="card-inner">
+                        <div class="front-face">
+                            <i class="fas fa-lightbulb icon-large"></i>
+                            <h3>Curiosité & Proactivité</h3>
+                        </div>
+                        <div class="back-face">
+                            <p>Passionnée par les nouvelles technologies, j’explore des projets personnels et des tutoriels pour approfondir mes compétences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="behavioral-card" data-animate="fade-in" data-animate-delay="100" role="button" aria-label="Esprit d'Équipe">
+                    <div class="card-inner">
+                        <div class="front-face">
+                            <i class="fas fa-users icon-large"></i>
+                            <h3>Esprit d'Équipe</h3>
+                        </div>
+                        <div class="back-face">
+                            <p>Formée aux travaux de groupe, je valorise la collaboration pour résoudre des problèmes et atteindre des objectifs communs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="behavioral-card" data-animate="fade-in" data-animate-delay="200" role="button" aria-label="Rigueur & Méthode">
+                    <div class="card-inner">
+                        <div class="front-face">
+                            <i class="fas fa-handshake icon-large"></i>
+                            <h3>Rigueur & Méthode</h3>
+                        </div>
+                        <div class="back-face">
+                            <p>Mon parcours scientifique m’a appris à travailler avec précision et à adopter une approche structurée en programmation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="behavioral-card" data-animate="fade-in" data-animate-delay="300" role="button" aria-label="Adaptabilité & Autonomie">
+                    <div class="card-inner">
+                        <div class="front-face">
+                            <i class="fas fa-brain icon-large"></i>
+                            <h3>Adaptabilité & Autonomie</h3>
+                        </div>
+                        <div class="back-face">
+                            <p>Je m’adapte rapidement aux nouveaux outils et défis, tout en étant capable de travailler de manière autonome.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-performance-goals-section container" data-animate="fade-in-up">
+            <div class="info-columns">
+                <div class="info-card" data-animate="slide-in-left">
+                    <h2 class="section-title"><i class="fas fa-chart-line"></i> Expérience & Performance</h2>
+                    <ul>
+                        <li class="text-right"><span class="highlight">Projets :</span> Création de sites web simples (HTML/CSS).</li>
+                        <li><span class="highlight">GitHub :</span> Gestion de projets via Git.</li>
+                        <li><span class="highlight">Analyse :</span> Compétences issues des études scientifiques.</li>
+                    </ul>
+                </div>
+                <div class="info-card" data-animate="slide-in-right">
+                    <h2 class="section-title"><i class="fas fa-bullseye"></i> Objectifs</h2>
+                    <ul>
+                        <li><span class="highlight">Frameworks :</span> Apprendre React.</li>
+                        <li><span class="highlight">Backend :</span> Découvrir Python (Django).</li>
+                        <li><span class="highlight">Open Source :</span> Contribuer à GitHub.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
+
+ 
 
     <footer class="main-footer">
         <div class="container">
@@ -98,7 +243,6 @@
     <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase"></i>Projets</a></li>
     <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope"></i>Contact</a></li>
 </ul>
-
                 </div>
 
                 <div class="footer-col">
@@ -132,10 +276,14 @@
         </div>
     </footer>
 
+
+
     <a href="#" class="scroll-to-top" aria-label="Retour en haut">
         <i class="fas fa-arrow-up"></i>
     </a>
 
+    
     <script src="js/common.js"></script>
+    <script src="js/skills.js"></script>
 </body>
 </html>

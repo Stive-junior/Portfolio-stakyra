@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hobbies & Activités</title>
+    <title>Mes Passions & Activités - Stakyra Morelle</title>
     <meta name="description" content="Découvrez les hobbies et activités de Stakyra Morelle en dehors du développement web.">
 
     <link rel="icon" href="images/img.png" type="image/png">
-    <link rel="apple-touch-icon" href="media/images/general/apple-touch-icon.png">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"  />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/hobbies.css">
 </head>
 <body>
-
-
-      <div class="animated-background">
+    <div class="animated-background" aria-hidden="true">
         <div class="stars"></div>
         <div class="twinkling"></div>
         <div class="gradient-globe"></div>
@@ -29,111 +24,99 @@
 
     <header class="main-header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="Accueil Stakyra">
                 <span>Stakyra</span>
             </a>
-
-          
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Navigation principale">
                 <ul class="nav-links">
-                   <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-                <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-                <li><a href="skills.html" class="nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-                <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-                     <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+                   <li><a href="index.html" class="nav-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+                    <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+                    <li><a href="skills.html" class="nav-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
+                     <button class="theme-toggle" aria-label="Changer de thème">
                     <i class="fas fa-moon"></i>
                 </button>
                 </ul>
             </nav>
-
-
-            
-             
-                <button class="burger-menu" aria-label="Menu mobile" id="mobile-menu-toggle">
-                    <span class="burger-line top"></span>
-                    <span class="burger-line mid"></span>
-                    <span class="burger-line bottom"></span>
-                </button>
-            
-
+             <button class="burger-menu" aria-label="Menu mobile" aria-expanded="false">
+                <span class="burger-line top"></span>
+                <span class="burger-line mid"></span>
+                <span class="burger-line bottom"></span>
+            </button>
         </div>
 
-        <div class="mobile-menu" id="mobile-menu">
-            <ul class="mobile-nav-links">
-            <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-            <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-            <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-            <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-            <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-            <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-
-            <button class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-moon"></i> Theme
-                </button>
-        </ul>
+        <div class="mobile-menu">
+            <nav aria-label="Navigation mobile">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+                    <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+                    <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+                    <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+                    <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
+                    <button class="theme-toggle" aria-label="Changer de thème">
+                        <i class="fas fa-moon"></i> Thème
+                    </button>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main>
-        <section class="container mt-5">
-            <h1 class="text-center mb-4">Mes Hobbies & Activités</h1>
-            </section>
+        <section class="hero-section">
+            <div class="container hero-container">
+                <h1 class="text-center mb-4"><br></h1>
+            </div>
+        </section>
+
+        <section class="hobbies-grid-section container" data-animate="fade-in-up">
+            <div class="hobbies-grid">
+
+                <div class="hobby-card card" data-animate="zoom-in">
+                    <div class="hobby-image-wrapper">
+                        <img src="images/image1.png" alt="Sport - Football" class="hobby-image">
+                    </div>
+                    <div class="hobby-content">
+                        <h2 class="hobby-title"><i class="fas fa-futbol" aria-hidden="true"></i> <span data-typing-delay="300" data-typing-speed="70">_Football</span></h2>
+                        <p>Le football est ma passion depuis l’enfance. J’aime ce sport car il développe l’esprit d’équipe, la concentration et le fair-play. Il me permet aussi de rester actif et de me dépasser. Jouer régulièrement m’aide à mieux gérer le stress et à garder un bon équilibre entre les études (ou le travail) et les loisirs.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card card" data-animate="zoom-in" data-animate-delay="100">
+                    <div class="hobby-image-wrapper">
+                        <img src="images/image2.png" alt="Art - Dessin et arts créatifs" class="hobby-image">
+                    </div>
+                    <div class="hobby-content">
+                        <h2 class="hobby-title"><i class="fas fa-palette" aria-hidden="true"></i> <span data-typing-delay="400" data-typing-speed="70">_Dessin & Arts Créatifs</span></h2>
+                        <p>Depuis plusieurs années, je me passionne pour le dessin sous toutes ses formes : manga, caricature, modélisation de vêtements et arts plastiques. Chaque style me permet d’explorer différentes facettes de la créativité : raconter une histoire à travers le manga, exprimer une idée avec humour dans la caricature, ou encore imaginer des tenues originales en dessinant des modèles de mode. Les arts plastiques, quant à eux, m’offrent un espace d’expérimentation et de liberté. Grâce à ces pratiques, je développe mon sens de l’observation, ma précision et ma sensibilité artistique.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card card" data-animate="zoom-in" data-animate-delay="200">
+                    <div class="hobby-image-wrapper">
+                        <img src="images/image3.png" alt="Passion - Animés" class="hobby-image">
+                    </div>
+                    <div class="hobby-content">
+                        <h2 class="hobby-title"><i class="fas fa-film" aria-hidden="true"></i> <span data-typing-delay="500" data-typing-speed="70">_Animés</span></h2>
+                        <p>Depuis mon enfance, les animés occupent une place importante dans ma vie. Ce sont bien plus que de simples dessins animés : ils m’ont permis de découvrir des histoires profondes, des personnages attachants et des univers riches en émotions. Pourtant, j’ai souvent été mise à l’écart à cause de cette passion, car on considérait, à tort, que les animés étaient réservés aux garçons. Malgré cela, j’ai continué à les aimer et à m’y intéresser, car ils m’ont beaucoup appris sur les valeurs comme l’amitié, la persévérance, le courage et l’acceptation de soi. Aujourd’hui, je suis fière de cette passion qui m’a aidée à me construire et à rester fidèle à ce que j’aime, même face aux jugements.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card card" data-animate="zoom-in" data-animate-delay="300">
+                    <div class="hobby-image-wrapper">
+                        <img src="images/image4.png" alt="Enjoy - Musique" class="hobby-image">
+                    </div>
+                    <div class="hobby-content">
+                        <h2 class="hobby-title"><i class="fas fa-music" aria-hidden="true"></i> <span data-typing-delay="600" data-typing-speed="70">_Musique</span></h2>
+                        <p>La musique fait partie de mon quotidien et m’accompagne dans tous les moments de ma vie. Elle m’aide à me concentrer, à me détendre, ou simplement à exprimer ce que je ressens. J’aime découvrir différents styles musicaux et artistes, car chacun offre une ambiance et une émotion unique. La musique a aussi été pour moi un refuge, un moyen de m’évader et de me sentir comprise, même sans mots. Elle nourrit mon imagination et stimule ma créativité.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
-
-     <div class="about-row">
-            <div class="about-img">
-                <img src="images/image1.png" alt="Sport">
-            </div>
-            <div class="about-text card">
-                <span class="text"><i class="fas fa-futbol"></i>  _Football</span><br><br>
-                    Le football est ma passion depuis l’enfance. J’aime ce sport car il développe l’esprit d’équipe, la concentration et le fair-play. Il me permet aussi de rester 
-                    actif et de me dépasser. Jouer régulièrement m’aide à mieux gérer le stress et à garder un bon équilibre entre les études (ou le travail) et les loisirs.
-            </div>
-        </div>
-
-
-        <div class="about-row reverse">
-            <div class="about-img">
-                <img src="images/image2.png" alt="Art">
-            </div>
-            <div class="about-text card">
-                <span class="text"> <i class="fas fa-palette"></i> _Dessin et arts créatifs</span><br><br>
-                Depuis plusieurs années, je me passionne pour le dessin sous toutes ses formes : manga, caricature, modélisation de vêtements et arts plastiques. Chaque style me 
-                permet d’explorer différentes facettes de la créativité : raconter une histoire à travers le manga, exprimer une idée avec humour dans la caricature, ou encore 
-                imaginer des tenues originales en dessinant des modèles de mode. Les arts plastiques, quant à eux, m’offrent un espace d’expérimentation et de liberté. Grâce à 
-                ces pratiques, je développe mon sens de l’observation, ma précision et ma sensibilité artistique.
-            </div>
-        </div>
-
-
-        <div class="about-row">
-            <div class="about-img">
-                <img src="images/image3.png" alt="Passion">
-            </div>
-            <div class="about-text card">
-                <span class="text"><i class="fas fa-film"></i>  _Animés</span><br><br>
-                Depuis mon enfance, les animés occupent une place importante dans ma vie. Ce sont bien plus que de simples dessins animés : ils m’ont permis de découvrir des 
-                histoires profondes, des personnages attachants et des univers riches en émotions. Pourtant, j’ai souvent été mise à l’écart à cause de cette passion, car on 
-                considérait, à tort, que les animés étaient réservés aux garçons. Malgré cela, j’ai continué à les aimer et à m’y intéresser, car ils m’ont beaucoup appris sur 
-                les valeurs comme l’amitié, la persévérance, le courage et l’acceptation de soi. Aujourd’hui, je suis fière de cette passion qui m’a aidée à me construire et 
-                à rester fidèle à ce que j’aime, même face aux jugements.
-            </div>
-        </div>
-
-        <div class="about-row">
-            <div class="about-img">
-                <img src="images/image4.png" alt="Enjoy">
-            </div>
-            <div class="about-text card">
-                <span class="text"><i class="fas fa-music"></i>  _MUsique</span><br><br>
-                La musique fait partie de mon quotidien et m’accompagne dans tous les moments de ma vie. Elle m’aide à me concentrer, à me détendre, ou simplement à exprimer 
-                ce que je ressens. J’aime découvrir différents styles musicaux et artistes, car chacun offre une ambiance et une émotion unique. La musique a aussi été pour 
-                moi un refuge, un moyen de m’évader et de me sentir comprise, même sans mots. Elle nourrit mon imagination et stimule ma créativité.
-            </div>
-        </div>
-
 
     <footer class="main-footer">
         <div class="container">
@@ -146,26 +129,26 @@
                 <div class="footer-col">
                     <h3>Navigation</h3>
                     <ul class="footer-links">
-    <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i>Accueil</a></li>
-    <li><a href="about.html" class="footer-link"><i class="fas fa-user"></i>À Propos</a></li>
-        <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-    <li><a href="skills.html" class="footer-link"><i class="fas fa-code"></i>Compétences</a></li>
-    <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-    <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope"></i>Contact</a></li>
-</ul>
+                        <li><a href="index.html" class="footer-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+                        <li><a href="about.html" class="footer-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+                        <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+                        <li><a href="skills.html" class="footer-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+                        <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
+                    </ul>
                 </div>
 
                 <div class="footer-col">
                     <h3>Réseaux</h3>
                     <div class="social-links">
-                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-github"></i>
+                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
                         </a>
-                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i></i>
                         </a>
-                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -173,8 +156,8 @@
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><a href="mailto:contact@stakyra.dev" class="footer-link">stakyramategne@gmail.com</a></li>
-                        <li><a href="tel:+237612345678" class="footer-link">+33 6 12 34 56 78</a></li>
+                        <li><a href="mailto:stakyramategne@gmail.com" class="footer-link">stakyramategne@gmail.com</a></li>
+                        <li><a href="tel:+33612345678" class="footer-link">+33 6 12 34 56 78</a></li>
                         <li>ANGERS - FRANCE</li>
                     </ul>
                 </div>
@@ -187,11 +170,10 @@
     </footer>
 
     <a href="#" class="scroll-to-top" aria-label="Retour en haut">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </a>
 
     <script src="js/common.js"></script>
-
-
+    <script src="js/hobbies.js"></script>
 </body>
 </html>

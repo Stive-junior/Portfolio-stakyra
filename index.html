@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stakyra Morelle</title>
-    <meta name="description" content="Portfolio de Stakyra Morelle, Développeuse Full-Stack spécialisée en React et Node.js">
+    <title>Stakyra Morelle - Développeuse Full-Stack</title> <meta name="description" content="Portfolio de Stakyra Morelle, Développeuse Full-Stack spécialisée en React et Node.js. Découvrez mes projets et compétences.">
     
-    <!-- Favicon -->
     <link rel="icon" href="images/img.png" type="image/png">
-    <link rel="apple-touch-icon" href="media/images/general/apple-touch-icon.png">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     
-    <!-- Feuilles de style -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -30,65 +24,49 @@
         <div class="gradient-globe"></div>
     </div>
 
-
-
-    <!-- Header -->
-    <header class="main-header">
-        
+   <header class="main-header">
         <div class="container header-container">
-            <a href="index.html" id="logo" class="logo">
+            <a href="index.html" class="logo" aria-label="Accueil Stakyra">
                 <span>Stakyra</span>
             </a>
-            
-           
 
-           
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Navigation principale">
                 <ul class="nav-links">
-                   <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-                <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-                <li><a href="skills.html" class="nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-                <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-                     <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-moon"></i>
-                </button>
+                   <li><a href="index.html" class="nav-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+                   <li><a href="about.html" class="nav-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+                   <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+                   <li><a href="skills.html" class="nav-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+                   <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+                   <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
+                   <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+                       <i class="fas fa-moon"></i>
+                   </button>
                 </ul>
             </nav>
 
-
-            
-             
-                <button class="burger-menu" aria-label="Menu mobile" id="mobile-menu-toggle">
-                    <span class="burger-line top"></span>
-                    <span class="burger-line mid"></span>
-                    <span class="burger-line bottom"></span>
-                </button>
-            
-
-
+            <button class="burger-menu" aria-label="Menu mobile" aria-expanded="false">
+                <span class="burger-line top"></span>
+                <span class="burger-line mid"></span>
+                <span class="burger-line bottom"></span>
+            </button>
         </div>
-        
-    
-        <div class="mobile-menu" id="mobile-menu">
-            <ul class="mobile-nav-links">
-            <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-            <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-            <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-            <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-            <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-            <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-            <button class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-moon"></i> Theme
-                </button>
-        </ul>
 
+        <div class="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+                <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+                <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+                <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+                <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+                <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
+                <button class="theme-toggle" aria-label="Changer de thème">
+                    <i class="fas fa-moon"></i> Thème
+                </button>
+            </ul>
         </div>
     </header>
 
     <main>
-        
         <section class="hero-section" id="hero">
             <div class="container hero-container">
                 <div class="hero-content" data-animate="fadeInUp">
@@ -112,8 +90,6 @@
                         <img src="images/img1.png" alt="Photo de Stakyra Morelle" class="avatar-image">
                     </div>
                     <div class="tech-stack">
-                        <i class="tech-icon fab fa-react" style="color: #61DAFB;" data-tooltip="React"></i>
-                        <i class="tech-icon fab fa-node-js" style="color: #68A063;" data-tooltip="Node.js"></i>
                         <i class="tech-icon fab fa-js" style="color: #F7DF1E;" data-tooltip="JavaScript"></i>
                         <i class="tech-icon fab fa-html5" style="color: #E34F26;" data-tooltip="HTML5"></i>
                         <i class="tech-icon fab fa-css3-alt" style="color: #1572B6;" data-tooltip="CSS3"></i>
@@ -122,7 +98,7 @@
                 </div>
             </div>
             
-            <a href="#gal" class="scroll-down">
+            <a href="#gallery" class="scroll-down">
                 <span class="scroll-down-text">Découvrir</span>
                 <div class="mouse">
                     <div class="wheel"></div>
@@ -130,11 +106,9 @@
             </a>
         </section>
 
-        <div id="gal" style="margin-bottom: 30px;"></div>
-
         <section class="gallery-section" id="gallery">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header" data-animate="fadeInUp">
                     <h2 class="section-title">Mes Réalisations</h2>
                     <p class="section-subtitle">
                         Une sélection de mes projets récents combinant créativité et expertise technique.
@@ -142,7 +116,6 @@
                 </div>
                 
                 <div class="gallery-grid">
-                    <!-- Projet 1 -->
                     <div class="gallery-item card" data-animate="fadeInUp">
                         <img src="images/img2.png" alt="Projet E-commerce" class="gallery-image">
                         <div class="gallery-overlay">
@@ -153,7 +126,6 @@
                         </div>
                     </div>
                     
-                    <!-- Projet 2 -->
                     <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.2s">
                         <img src="images/fitness-app.png" alt="Application Mobile" class="gallery-image">
                         <div class="gallery-overlay">
@@ -164,7 +136,6 @@
                         </div>
                     </div>
                     
-                    <!-- Projet 3 -->
                     <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
                         <img src="images/img3.png" alt="Dashboard Analytics" class="gallery-image">
                         <div class="gallery-overlay">
@@ -175,65 +146,58 @@
                         </div>
                     </div>
 
-                    <!-- Projet 4 -->
-                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
-                        <img src="images/img.png" alt="Dashboard Analytics" class="gallery-image">
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.6s">
+                        <img src="images/image1.png" alt="Projet Web Design" class="gallery-image">
                         <div class="gallery-overlay">
-                            <span class="gallery-category">DataViz</span>
-                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <span class="gallery-category">Design UI/UX</span>
+                            <h3 class="gallery-title">Refonte Portfolio</h3>
                             <p>Stakyra</p>
-                            <a href="projects.html#projet3" class="btn btn-outline btn-sm">Voir plus</a>
+                            <a href="projects.html#projet4" class="btn btn-outline btn-sm">Voir plus</a>
                         </div>
                     </div>
 
-                    <!-- Projet 1 -->
-                    <div class="gallery-item card" data-animate="fadeInUp">
-                        <img src="images/img6.png" alt="Projet E-commerce" class="gallery-image">
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.8s">
+                        <img src="images/image2.png" alt="Application de messagerie" class="gallery-image">
                         <div class="gallery-overlay">
-                            <span class="gallery-category">Full-Stack</span>
-                            <h3 class="gallery-title">Plateforme E-commerce</h3>
+                            <span class="gallery-category">Backend</span>
+                            <h3 class="gallery-title">API RESTful</h3>
                             <p>Stakyra</p>
-                            <a href="projects.html#projet1" class="btn btn-outline btn-sm">Voir plus</a>
+                            <a href="projects.html#projet5" class="btn btn-outline btn-sm">Voir plus</a>
                         </div>
                     </div>
                     
-                    <!-- Projet 2 -->
-                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.2s">
-                        <img src="images/img5.png" alt="Application Mobile" class="gallery-image">
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 1.0s">
+                        <img src="images/image3.png" alt="Application de gestion" class="gallery-image">
                         <div class="gallery-overlay">
-                            <span class="gallery-category">Mobile</span>
-                            <h3 class="gallery-title">Application Fitness</h3>
+                            <span class="gallery-category">Gestion</span>
+                            <h3 class="gallery-title">Système CRM</h3>
                             <p>Stakyra</p>
-                            <a href="projects.html#projet2" class="btn btn-outline btn-sm">Voir plus</a>
+                            <a href="projects.html#projet6" class="btn btn-outline btn-sm">Voir plus</a>
                         </div>
                     </div>
                     
-                    <!-- Projet 3 -->
-                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
-                        <img src="images/img4.png" alt="Dashboard Analytics" class="gallery-image">
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 1.2s">
+                        <img src="images/image4.png" alt="Site de Blog" class="gallery-image">
                         <div class="gallery-overlay">
-                            <span class="gallery-category">DataViz</span>
-                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <span class="gallery-category">Frontend</span>
+                            <h3 class="gallery-title">Blog Personnel</h3>
                             <p>Stakyra</p>
-                            <a href="projects.html#projet3" class="btn btn-outline btn-sm">Voir plus</a>
+                            <a href="projects.html#projet7" class="btn btn-outline btn-sm">Voir plus</a>
                         </div>
                     </div>
 
-                    <!-- Projet 4 -->
-                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
-                        <img src="images/img.png" alt="Dashboard Analytics" class="gallery-image">
+                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 1.4s">
+                        <img src="images/img9.png" alt="Application SaaS" class="gallery-image">
                         <div class="gallery-overlay">
-                            <span class="gallery-category">DataViz</span>
-                            <h3 class="gallery-title">Dashboard Analytics</h3>
+                            <span class="gallery-category">SaaS</span>
+                            <h3 class="gallery-title">Outil de Productivité</h3>
                             <p>Stakyra</p>
-                            <a href="projects.html#projet3" class="btn btn-outline btn-sm">Voir plus</a>
+                            <a href="projects.html#projet8" class="btn btn-outline btn-sm">Voir plus</a>
                         </div>
                     </div>
-
-
                 </div>
                 
-                <div class="text-center mt-5">
+                <div class="text-center mt-5" data-animate="fadeInUp" style="animation-delay: 1.6s">
                     <a href="projects.html" class="btn btn-primary btn-icon">
                         <i class="fas fa-arrow-right"></i> Voir tous mes projets
                     </a>
@@ -242,7 +206,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
@@ -254,25 +217,25 @@
                 <div class="footer-col">
                     <h3>Navigation</h3>
                     <ul class="footer-links">
-    <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i>Accueil</a></li>
-    <li><a href="about.html" class="footer-link"><i class="fas fa-user"></i>À Propos</a></li>
-        <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-    <li><a href="skills.html" class="footer-link"><i class="fas fa-code"></i>Compétences</a></li>
-    <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-    <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope"></i>Contact</a></li>
-</ul>
+                        <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i>Accueil</a></li>
+                        <li><a href="about.html" class="footer-link"><i class="fas fa-user"></i>À Propos</a></li>
+                        <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart"></i>Hobbies</a></li>
+                        <li><a href="skills.html" class="footer-link"><i class="fas fa-code"></i>Compétences</a></li>
+                        <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase"></i>Projets</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope"></i>Contact</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3>Réseaux</h3>
                     <div class="social-links">
-                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener">
+                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener">
+                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener">
+                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
@@ -281,8 +244,8 @@
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><a href="mailto:contact@stakyra.dev" class="footer-link">stakyramategne@gmail.com</a></li>
-                        <li><a href="tel:+237612345678" class="footer-link">+33 6 12 34 56 78</a></li>
+                        <li><a href="mailto:stakyramategne@gmail.com" class="footer-link">stakyramategne@gmail.com</a></li>
+                        <li><a href="tel:+33612345678" class="footer-link">+33 6 12 34 56 78</a></li>
                         <li>ANGERS - FRANCE</li>
                     </ul>
                 </div>
@@ -294,46 +257,10 @@
         </div>
     </footer>
 
-
     <a href="#" class="scroll-to-top" aria-label="Retour en haut">
         <i class="fas fa-arrow-up"></i>
     </a>
-
   
     <script src="js/common.js"></script>
-    <script src="js/index.js"></script>
-    <script>
-        // Gestion du menu burger
-        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.getElementById('mobile-menu').classList.toggle('active');
-            document.body.classList.toggle('no-scroll');
-        });
-
-        // Fermer le menu quand on clique sur un lien
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobile-menu-toggle').click();
-            });
-        });
-
-        // Gestion du thème
-        const themeToggle = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-
-        document.body.setAttribute('data-theme', currentTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const newTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            document.body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-        
-            themeToggle.style.transform = 'scale(1.2)';
-            setTimeout(() => {
-                themeToggle.style.transform = 'scale(1)';
-            }, 300);
-        });
-    </script>
-</body>
+    </body>
 </html>

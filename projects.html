@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets </title>
+    <title>Projets | Stakyra Morelle</title>
     <meta name="description" content="Découvrez les projets web et les réalisations de Stakyra Morelle en développement full-stack.">
 
     <link rel="icon" href="images/img.png" type="image/png">
-    <link rel="apple-touch-icon" href="media/images/general/apple-touch-icon.png">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,191 +18,231 @@
 </head>
 <body>
 
-      <div class="animated-background">
+    <div class="animated-background" aria-hidden="true">
         <div class="stars"></div>
         <div class="twinkling"></div>
         <div class="gradient-globe"></div>
     </div>
 
-
-
     <header class="main-header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="Accueil Stakyra">
                 <span>Stakyra</span>
             </a>
 
-           
-
-                       <nav class="main-nav">
+            <nav class="main-nav" aria-label="Navigation principale">
                 <ul class="nav-links">
-                   <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-                <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-                <li><a href="skills.html" class="nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-                <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-                     <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-moon"></i>
-                </button>
+                   <li><a href="index.html" class="nav-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+                   <li><a href="about.html" class="nav-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+                   <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+                   <li><a href="skills.html" class="nav-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+                   <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+                   <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
+                   <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+                       <i class="fas fa-moon"></i>
+                   </button>
                 </ul>
             </nav>
 
-
-            
-             
-                <button class="burger-menu" aria-label="Menu mobile" id="mobile-menu-toggle">
-                    <span class="burger-line top"></span>
-                    <span class="burger-line mid"></span>
-                    <span class="burger-line bottom"></span>
-                </button>
-            
+            <button class="burger-menu" aria-label="Menu mobile" aria-expanded="false">
+                <span class="burger-line top"></span>
+                <span class="burger-line mid"></span>
+                <span class="burger-line bottom"></span>
+            </button>
         </div>
 
-        <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu">
             <ul class="mobile-nav-links">
-            <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-            <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-            <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-            <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-            <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-            <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-            <button class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-moon"></i> Theme
+                <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+                <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+                <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+                <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+                <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+                <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
+                <button class="theme-toggle" aria-label="Changer de thème">
+                    <i class="fas fa-moon"></i> Thème
                 </button>
-        </ul>
+            </ul>
         </div>
     </header>
 
     <main>
-        <section class="container mt-5">
-            <h1 class="text-center mb-4"><i class="fas fa-award"></i> Mes Projets</h1>
-            <section class="gallery-section" id="gallery">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title"><i class="fas fa-laptop-code"></i> Réalisations</h2>
-                    <p class="section-subtitle">
-                        Une sélection de mes projets récents combinant créativité et expertise technique.
-                    </p>
-                </div>
-                
-                <div class="gallery-grid">
-                    <!-- Projet 1 -->
-                    <div class="gallery-item card" data-animate="fadeInUp">
-                        <img src="images/img2.png" alt="Projet E-commerce" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">Full-Stack</span>
-                            <h3 class="gallery-title">Plateforme E-commerce</h3>
-                            <p>Stakyra</p>
-                            <a href="projects.html#projet1"></a>
-                        </div>
-                    </div><button class="btn-primary1">
-                        ↓ En savoir plus
-                    </button>
-                    
-                    <!-- Projet 2 -->
-                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.2s">
-                        <img src="images/fitness-app.png" alt="Application Mobile" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">Mobile</span>
-                            <h3 class="gallery-title">Application Fitness</h3>
-                            <p>Stakyra</p>
-                            <a href="projects.html#projet2"></a>
-                        </div>
-                    </div><button class="btn-primary1">
-                        ↓ En savoir plus
-                    </button>
-                    
-                    <!-- Projet 3 -->
-                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
-                        <img src="images/img3.png" alt="Dashboard Analytics" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">DataViz</span>
-                            <h3 class="gallery-title">Dashboard Analytics</h3>
-                            <p>Stakyra</p>
-                            <a href="projects.html#projet3"></a>
-                        </div>
-                    </div><button class="btn btn-primary1">
-                        ↓ En savoir plus
-                    </button>
-
-                    <!-- Projet 4 -->
-                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
-                        <img src="images/img8.png" alt="Dashboard Analytics" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">DataViz</span>
-                            <h3 class="gallery-title">Dashboard Analytics</h3>
-                            <p>Stakyra</p>
-                            <a href="projects.html#projet3"></a>
-                        </div>
-                    </div>
-                        <button class="btn-primary1">
-                            ↓ En savoir plus
-                        </button>
-
-                    <!-- Projet 1 -->
-                    <div class="gallery-item card" data-animate="fadeInUp">
-                        <img src="images/img6.png" alt="Projet E-commerce" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">Full-Stack</span>
-                            <h3 class="gallery-title">Plateforme E-commerce</h3>
-                            <p>Stakyra</p>
-                            <a href="projects.html#projet1"></a>
-                        </div>
-                    </div><button class="btn-primary1">
-                            ↓ En savoir plus
-                        </button>
-                    
-                    <!-- Projet 2 -->
-                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.2s">
-                        <img src="images/img5.png" alt="Application Mobile" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">Mobile</span>
-                            <h3 class="gallery-title">Application Fitness</h3>
-                            <p>Stakyra</p>
-                            <a href="projects.html#projet2"></a>
-                        </div>
-                    </div><button class="btn-primary1"> 
-                        ↓ En savoir plus
-                    </button>
-                    
-                    <!-- Projet 3 -->
-                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
-                        <img src="images/img4.png" alt="Dashboard Analytics" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">DataViz</span>
-                            <h3 class="gallery-title">Dashboard Analytics</h3>
-                            <p>Stakyra</p>
-                            <a href="projects.html#projet3"></a>
-                        </div>
-                    </div><button class="btn-primary1">
-                        ↓ En savoir plus
-
-                    </button>
-
-                    <!-- Projet 4 -->
-                    <div class="gallery-item card" data-animate="fadeInUp" style="animation-delay: 0.4s">
-                        <img src="images/img9.png" alt="Dashboard Analytics" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">DataViz</span>
-                            <h3 class="gallery-title">Dashboard Analytics</h3>
-                            <p>Stakyra</p>
-                            <a href="projects.html#projet3"></a>
-                        </div>
-                    </div><button class="btn-primary1">
-                        ↓ En savoir plus
-                        </button>
-
-
-                </div>
-                
-                <div class="text-center mt-5">
-                    
-                </div>
+        <section class="hero-section">
+            <div class="container hero-container">
+                <h1 class="text-center mb-4"></h1>
+                <p class="text-center section-description">
+                   
+                </p>
             </div>
         </section>
+
+        <section class="gallery-section container" id="gallery" data-animate="fade-in-up">
+            <div class="gallery-grid">
+                <div class="project-card-wrapper card" data-animate="fadeInUp">
+                    <a href="project-details/e-commerce.html" class="project-card-link" aria-label="Détails du projet Plateforme E-commerce">
+                        <div class="project-image-area">
+                            <img src="images/img2.png" alt="Projet E-commerce" class="project-image">
+                        </div>
+                        <div class="project-info-area">
+                            <span class="project-category">Full-Stack</span>
+                            <h3 class="project-title">Plateforme E-commerce</h3>
+                            <p class="project-short-description">Développement d'une boutique en ligne complète.</p>
+                            <div class="project-full-details">
+                                <p class="project-long-description">Ce projet a inclus la gestion des produits, des utilisateurs, un panier d'achat, et un système de paiement sécurisé, ainsi qu'un tableau de bord pour l'administration.</p>
+                                <div class="project-tags">
+                                    <span class="tag">#React</span> <span class="tag">#Node.js</span> <span class="tag">#MongoDB</span>
+                                </div>
+                                <span class="view-details-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card-wrapper card" data-animate="fadeInUp" style="animation-delay: 0.2s">
+                    <a href="project-details/fitness-app.html" class="project-card-link" aria-label="Détails du projet Application Fitness">
+                        <div class="project-image-area">
+                            <img src="images/fitness-app.png" alt="Application Mobile Fitness" class="project-image">
+                        </div>
+                        <div class="project-info-area">
+                            <span class="project-category">Mobile</span>
+                            <h3 class="project-title">Application Fitness</h3>
+                            <p class="project-short-description">Suivi d'activités sportives et planification d'exercices.</p>
+                            <div class="project-full-details">
+                                <p class="project-long-description">Application mobile intuitive pour enregistrer les séances d'entraînement, suivre les progrès et définir des objectifs personnalisés, avec intégration d'une base de données cloud.</p>
+                                <div class="project-tags">
+                                    <span class="tag">#ReactNative</span> <span class="tag">#Firebase</span>
+                                </div>
+                                <span class="view-details-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card-wrapper card" data-animate="fadeInUp" style="animation-delay: 0.4s">
+                    <a href="project-details/dashboard-analytics.html" class="project-card-link" aria-label="Détails du projet Dashboard Analytics">
+                        <div class="project-image-area">
+                            <img src="images/img3.png" alt="Dashboard Analytics" class="project-image">
+                        </div>
+                        <div class="project-info-area">
+                            <span class="project-category">DataViz</span>
+                            <h3 class="project-title">Dashboard Analytics</h3>
+                            <p class="project-short-description">Visualisation interactive de données d'entreprise.</p>
+                            <div class="project-full-details">
+                                <p class="project-long-description">Développement d'un tableau de bord permettant d'analyser des métriques de vente et de performance avec des graphiques dynamiques et des filtres avancés pour des prises de décision éclairées.</p>
+                                <div class="project-tags">
+                                    <span class="tag">#D3.js</span> <span class="tag">#Python</span> <span class="tag">#Flask</span>
+                                </div>
+                                <span class="view-details-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card-wrapper card" data-animate="fadeInUp" style="animation-delay: 0.6s">
+                    <a href="project-details/another-dashboard.html" class="project-card-link" aria-label="Détails du projet Dashboard de Performance">
+                        <div class="project-image-area">
+                            <img src="images/img8.png" alt="Dashboard de Performance" class="project-image">
+                        </div>
+                        <div class="project-info-area">
+                            <span class="project-category">DataViz</span>
+                            <h3 class="project-title">Dashboard de Performance</h3>
+                            <p class="project-short-description">Suivi des indicateurs clés pour l'optimisation des processus.</p>
+                            <div class="project-full-details">
+                                <p class="project-long-description">Ce dashboard offre une vue consolidée des KPIs financiers et opérationnels, facilitant l'identification des tendances et des goulots d'étranglement pour améliorer l'efficacité.</p>
+                                <div class="project-tags">
+                                    <span class="tag">#Tableau</span> <span class="tag">#SQL</span>
+                                </div>
+                                <span class="view-details-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card-wrapper card" data-animate="fadeInUp" style="animation-delay: 0.8s">
+                    <a href="project-details/blog-platform.html" class="project-card-link" aria-label="Détails du projet Plateforme de Blog">
+                        <div class="project-image-area">
+                            <img src="images/img6.png" alt="Plateforme de Blog" class="project-image">
+                        </div>
+                        <div class="project-info-area">
+                            <span class="project-category">Front-End</span>
+                            <h3 class="project-title">Plateforme de Blog</h3>
+                            <p class="project-short-description">Interface utilisateur réactive et gestion de contenu simple.</p>
+                            <div class="project-full-details">
+                                <p class="project-long-description">Conception d'une plateforme de blogging avec un focus sur l'expérience utilisateur, des mises en page personnalisables et une intégration API pour la gestion des articles.</p>
+                                <div class="project-tags">
+                                    <span class="tag">#Vue.js</span> <span class="tag">#SCSS</span>
+                                </div>
+                                <span class="view-details-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card-wrapper card" data-animate="fadeInUp" style="animation-delay: 1.0s">
+                    <a href="project-details/chatbot.html" class="project-card-link" aria-label="Détails du projet Chatbot Intelligent">
+                        <div class="project-image-area">
+                            <img src="images/img5.png" alt="Chatbot Intelligent" class="project-image">
+                        </div>
+                        <div class="project-info-area">
+                            <span class="project-category">IA/ML</span>
+                            <h3 class="project-title">Chatbot Intelligent</h3>
+                            <p class="project-short-description">Assistant conversationnel pour l'assistance client.</p>
+                            <div class="project-full-details">
+                                <p class="project-long-description">Développement d'un agent conversationnel utilisant le traitement du langage naturel pour répondre aux questions fréquentes des utilisateurs et automatiser certaines tâches support.</p>
+                                <div class="project-tags">
+                                    <span class="tag">#Python</span> <span class="tag">#NLP</span>
+                                </div>
+                                <span class="view-details-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card-wrapper card" data-animate="fadeInUp" style="animation-delay: 1.2s">
+                    <a href="project-details/portfolio.html" class="project-card-link" aria-label="Détails du projet Portfolio Personnel">
+                        <div class="project-image-area">
+                            <img src="images/img4.png" alt="Portfolio Personnel" class="project-image">
+                        </div>
+                        <div class="project-info-area">
+                            <span class="project-category">Design Web</span>
+                            <h3 class="project-title">Portfolio Personnel</h3>
+                            <p class="project-short-description">Le site que vous visitez actuellement !</p>
+                            <div class="project-full-details">
+                                <p class="project-long-description">Ce portfolio est une vitrine de mes compétences en développement web front-end, avec une attention particulière au design réactif, aux animations fluides et à l'expérience utilisateur.</p>
+                                <div class="project-tags">
+                                    <span class="tag">#HTML</span> <span class="tag">#CSS</span> <span class="tag">#JavaScript</span>
+                                </div>
+                                <span class="view-details-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card-wrapper card" data-animate="fadeInUp" style="animation-delay: 1.4s">
+                    <a href="project-details/game-dev.html" class="project-card-link" aria-label="Détails du projet Jeu 2D">
+                        <div class="project-image-area">
+                            <img src="images/img9.png" alt="Jeu 2D" class="project-image">
+                        </div>
+                        <div class="project-info-area">
+                            <span class="project-category">Jeu</span>
+                            <h3 class="project-title">Jeu de Plateforme 2D</h3>
+                            <p class="project-short-description">Un petit jeu interactif développé pour le web.</p>
+                            <div class="project-full-details">
+                                <p class="project-long-description">Création d'un jeu de plateforme simple avec gestion des collisions, des mouvements de personnage et des niveaux, pour explorer les capacités de JavaScript dans le développement ludique.</p>
+                                <div class="project-tags">
+                                    <span class="tag">#Phaser.js</span> <span class="tag">#JavaScript</span>
+                                </div>
+                                <span class="view-details-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                </div>
+        </section>
     </main>
-    
 
     <footer class="main-footer">
         <div class="container">
@@ -217,26 +255,26 @@
                 <div class="footer-col">
                     <h3>Navigation</h3>
                     <ul class="footer-links">
-    <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i>Accueil</a></li>
-    <li><a href="about.html" class="footer-link"><i class="fas fa-user"></i>À Propos</a></li>
-        <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-    <li><a href="skills.html" class="footer-link"><i class="fas fa-code"></i>Compétences</a></li>
-    <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-    <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope"></i>Contact</a></li>
-</ul>
+                        <li><a href="index.html" class="footer-link"><i class="fas fa-home" aria-hidden="true"></i>Accueil</a></li>
+                        <li><a href="about.html" class="footer-link"><i class="fas fa-user" aria-hidden="true"></i>À Propos</a></li>
+                        <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart" aria-hidden="true"></i>Hobbies</a></li>
+                        <li><a href="skills.html" class="footer-link"><i class="fas fa-code" aria-hidden="true"></i>Compétences</a></li>
+                        <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase" aria-hidden="true"></i>Projets</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
+                    </ul>
                 </div>
 
                 <div class="footer-col">
                     <h3>Réseaux</h3>
                     <div class="social-links">
-                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-github"></i>
+                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
                         </a>
-                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                         </a>
-                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -244,8 +282,8 @@
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><a href="mailto:contact@stakyra.dev" class="footer-link">stakyramategne@gmail.com</a></li>
-                        <li><a href="tel:+237612345678" class="footer-link">+33 6 12 34 56 78</a></li>
+                        <li><a href="mailto:stakyramategne@gmail.com" class="footer-link">stakyramategne@gmail.com</a></li>
+                        <li><a href="tel:+33612345678" class="footer-link">+33 6 12 34 56 78</a></li>
                         <li>ANGERS - FRANCE</li>
                     </ul>
                 </div>
@@ -258,42 +296,9 @@
     </footer>
 
     <a href="#" class="scroll-to-top" aria-label="Retour en haut">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </a>
 
-    <script src="js/common.js">
-        // Gestion du menu burger
-        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.getElementById('mobile-menu').classList.toggle('active');
-            document.body.classList.toggle('no-scroll');
-        });
-
-        // Fermer le menu quand on clique sur un lien
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobile-menu-toggle').click();
-            });
-        });
-
-        // Gestion du thème
-        const themeToggle = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-
-        document.body.setAttribute('data-theme', currentTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const newTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            document.body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-        
-            themeToggle.style.transform = 'scale(1.2)';
-            setTimeout(() => {
-                themeToggle.style.transform = 'scale(1)';
-            }, 300);
-        });
-
-    </script>
-</body>
+    <script src="js/common.js"></script>
+    <script src="js/projects.js"></script> </body>
 </html>

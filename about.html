@@ -22,119 +22,99 @@
 <body>
 
 
-    <div class="animated-background">
+    <div class="animated-background" aria-hidden="true">
         <div class="stars"></div>
         <div class="twinkling"></div>
         <div class="gradient-globe"></div>
     </div>
 
-
-
-    <!-- Header -->
     <header class="main-header">
-        
         <div class="container header-container">
-            <a href="index.html" id="logo" class="logo">
+            <a href="index.html" class="logo" aria-label="Accueil Stakyra">
                 <span>Stakyra</span>
             </a>
             
-       
-                       <nav class="main-nav">
+            <nav class="main-nav" aria-label="Navigation principale">
                 <ul class="nav-links">
-                   <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-                <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-                <li><a href="skills.html" class="nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-                <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-                     <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-moon"></i>
-                </button>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Accueil</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i>À Propos</a></li>
+                    <li><a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
+                    <li><a href="skills.html" class="nav-link"><i class="fas fa-code"></i>Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+                    <button class="theme-toggle" aria-label="Changer de thème">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </ul>
             </nav>
-
-
-            
              
-                <button class="burger-menu" aria-label="Menu mobile" id="mobile-menu-toggle">
-                    <span class="burger-line top"></span>
-                    <span class="burger-line mid"></span>
-                    <span class="burger-line bottom"></span>
-                </button>
-            
-
+            <button class="burger-menu" aria-label="Menu mobile" aria-expanded="false">
+                <span class="burger-line top"></span>
+                <span class="burger-line mid"></span>
+                <span class="burger-line bottom"></span>
+            </button>
         </div>
         
-    
-        <div class="mobile-menu" id="mobile-menu">
-            <ul class="mobile-nav-links">
-            <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i>Accueil</a></li>
-            <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user"></i>À Propos</a></li>
-            <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-            <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code"></i>Compétences</a></li>
-            <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-            <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-
-            <button class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-moon"></i> Theme
-                </button>
-        </ul>
+        <div class="mobile-menu">
+            <nav aria-label="Navigation mobile">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i>Accueil</a></li>
+                    <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user"></i>À Propos</a></li>
+                    <li><a href="hobbies.html" class="mobile-nav-link"><i class="fas fa-heart"></i>Hobbies</a></li>
+                    <li><a href="skills.html" class="mobile-nav-link"><i class="fas fa-code"></i>Compétences</a></li>
+                    <li><a href="projects.html" class="mobile-nav-link"><i class="fas fa-briefcase"></i>Projets</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+                    <button class="theme-toggle" aria-label="Changer de thème">
+                        <i class="fas fa-moon"></i> Thème
+                    </button>
+                </ul>
+            </nav>
         </div>
     </header>
 
-
     <main>
-    
-            <section class="hero-section" id="hero">
-                <div class="container hero-container">
-            <h1 class="text-center mb-4">À Propos de Moi</h1>
+        <section class="hero-section">
+            <div class="container hero-container mb-5">
+                
             </div>
+        </section>
 
-            </section>
+        <section class="about-content">
+            <div class="container">
+                <div class="about-row" data-animate="fade-in-up">
+                    <div class="about-img">
+                        <img src="images/img.png" alt="Stakyra Morelle - Présentation personnelle">
+                    </div>
+                    <div class="about-text card">
+                        <h2 class="text"><i class="fas fa-book-open" aria-hidden="true"></i> <span data-typing-delay="500" data-typing-speed="70">_Présentation personnelle</span></h2>
+                        <p>Je m'appelle **Stakyra Morelle**, j'ai 19 ans et je suis actuellement étudiante à l'ESAIP, une école d'ingénieurs spécialisée en informatique. Ma passion pour la technologie et l'électronique a débuté dès l'âge de 8 ans. Ce monde fascinant m'a rapidement captivée, me guidant naturellement vers le développement web.</p>
+                        <p>En classe de première, j'ai conçu mon tout premier site web d'e-commerce. Ce projet a non seulement confirmé mon intérêt profond pour le domaine, mais il a aussi fait naître en moi une conviction inébranlable : transformer cette passion en une carrière professionnelle.</p>
+                    </div>
+                </div>
 
-            
-        <div class="about-row">
-            <div class="about-img">
-                <img src="images/img.png" alt="Moi">
+                <div class="about-row reverse" data-animate="fade-in-up">
+                    <div class="about-img">
+                        <img src="images/img.png" alt="Expérience en restaurant - Qualités humaines">
+                    </div>
+                    <div class="about-text card">
+                        <h2 class="text"><i class="fas fa-user-tie" aria-hidden="true"></i> <span data-typing-delay="500" data-typing-speed="70">_Expérience en emploi et qualités humaines</span></h2>
+                        <p>Mon parcours ne s'arrête pas là. J'ai également eu l'opportunité de travailler dans un restaurant en tant que second du chef, une expérience humaine particulièrement enrichissante. Cette immersion m'a enseigné la gestion du stress, l'importance de maintenir une attitude positive face aux imprévus, l'écoute active des besoins des autres et, surtout, la valeur primordiale du travail en équipe.</p>
+                        <p>Toutes ces compétences, développées dans un cadre exigeant mais formateur, m'accompagnent aujourd'hui dans chacun de mes projets informatiques. Elles me rappellent qu'au-delà de chaque ligne de code, il y a un besoin réel, une personne, une émotion. C'est cette dimension humaine qui me motive à créer des solutions qui sont à la fois fonctionnelles et intuitives.</p>
+                    </div>
+                </div>
+
+                <div class="about-row" data-animate="fade-in-up">
+                    <div class="about-img">
+                        <img src="images/img.png" alt="Philosophie de travail et ambitions">
+                    </div>
+                    <div class="about-text card">
+                        <h2 class="text"><i class="fas fa-lightbulb" aria-hidden="true"></i> <span data-typing-delay="500" data-typing-speed="70">_Philosophie de travail et ambitions</span></h2>
+                        <p>Ce que j'aime par-dessus tout dans mon travail, c'est cette magie qui opère lorsque qu'une idée abstraite se concrétise. Concevoir une interface, résoudre un problème complexe, ou optimiser une application : chaque défi représente une nouvelle opportunité de grandir et d'apprendre.</p>
+                        <p>Je me décris comme une personne curieuse, créative, déterminée et constamment en quête de nouvelles connaissances. J'aime explorer de nouvelles technologies, repousser les limites de ce que je peux imaginer, et m'améliorer continuellement. Je suis en recherche active de projets stimulants, qu'ils soient individuels ou collectifs, au sein d'un environnement dynamique et tourné vers l'avenir. Mon objectif est de créer avec passion et de contribuer, à ma manière, à un monde digital plus innovant et plus humain.</p>
+                    </div>
+                </div>
             </div>
-            <div class="about-text card">
-                <span class="text"><i class="fas fa-book-open"></i>  _Présentation personnelle</span><br><br>
-                    Je m'appelle Stakyra Morelle, j'ai 19 ans et je suis actuellement étudiante à l'ESAIP, école d'ingénieurs en filière informatique. Depuis l'âge de 8 ans, je me passionne 
-                    pour les appareils utilisant la technologie et l’électronique. Ce monde fascinant m'a très vite captivée et m’a naturellement guidée vers le développement web. En classe 
-                    de première, j'ai conçu mon tout premier site web en e-commerce — un projet qui a non seulement confirmé mon intérêt, mais qui a aussi fait naître en moi une profonde 
-                    conviction : je voulais transformer cette passion en métier.
-            </div>
-        </div>
-
-
-        <div class="about-row reverse">
-            <div class="about-img">
-                <img src="images/img.png" alt="Restaurant">
-            </div>
-            <div class="about-text card">
-                <span class="text"> <i class="fas fa-user-tie"></i> _Expérience en emploi et qualités humaines</span><br><br>
-                Mais mon parcours ne s'arrête pas là. J'ai également travaillé dans un restaurant en tant que second du chef, une expérience humaine riche qui m'a beaucoup appris. 
-                Travailler sous pression, garder le sourire face aux imprévus, être à l'écoute des autres et, surtout, comprendre l'importance du travail en équipe : toutes ces 
-                compétences, je les ai développées dans un cadre exigeant mais formateur. Ce vécu m'accompagne aujourd'hui dans chacun de mes projets informatiques. Il me rappelle 
-                que derrière chaque ligne de code, il y a un besoin, une personne, une émotion. Et c'est cette dimension humaine qui me pousse à créer des solutions à la fois 
-                fonctionnelles et sensibles.
-            </div>
-        </div>
-
-
-<div class="about-row">
-    <div class="about-img">
-        <img src="images/img.png" alt="Développement">
-    </div>
-    <div class="about-text card">
-        <span class="text"><i class="fas fa-lightbulb"></i>  _Philosophie de travail et ambitions</span><br><br>
-        Ce que j'aime dans mon travail, c'est cette magie qui opère quand une idée devient réalité. Concevoir une interface, résoudre un problème, optimiser une application... 
-        chaque défi est une occasion de grandir. Je me décris comme une personne curieuse, créative, déterminée et toujours en quête de nouvelles connaissances. J'aime explorer, 
-        apprendre, repousser les limites de ce que je peux imaginer.<br>Je suis en constante recherche de projets stimulants, que ce soit en équipe ou en autonomie, dans un 
-        environnement dynamique, avec un regard tourné vers l'avenir. Car au fond, ce que je cherche, c'est de créer avec passion et de contribuer, à ma manière, à un monde 
-        un peu plus innovant et humain.
-    </div>
-</div>
+        </section>
     </main>
 
     <footer class="main-footer">
@@ -148,25 +128,25 @@
                 <div class="footer-col">
                     <h3>Navigation</h3>
                     <ul class="footer-links">
-    <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i>Accueil</a></li>
-    <li><a href="about.html" class="footer-link"><i class="fas fa-user"></i>À Propos</a></li>
-    <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart"></i>Hobbies</a></li>
-    <li><a href="skills.html" class="footer-link"><i class="fas fa-code"></i>Compétences</a></li>
-    <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase"></i>Projets</a></li>
-    <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope"></i>Contact</a></li>
-</ul>
+                        <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i>Accueil</a></li>
+                        <li><a href="about.html" class="footer-link"><i class="fas fa-user"></i>À Propos</a></li>
+                        <li><a href="hobbies.html" class="footer-link"><i class="fas fa-heart"></i>Hobbies</a></li>
+                        <li><a href="skills.html" class="footer-link"><i class="fas fa-code"></i>Compétences</a></li>
+                        <li><a href="projects.html" class="footer-link"><i class="fas fa-briefcase"></i>Projets</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope"></i>Contact</a></li>
+                    </ul>
                 </div>
 
                 <div class="footer-col">
                     <h3>Réseaux</h3>
                     <div class="social-links">
-                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener">
+                        <a href="https://github.com/stakyra" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener">
+                        <a href="https://linkedin.com/in/stakyra" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener">
+                        <a href="https://twitter.com/stakyra_dev" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Mon profil Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
@@ -175,8 +155,8 @@
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><a href="mailto:contact@stakyra.dev" class="footer-link">stakyramategne@gmail.com</a></li>
-                        <li><a href="tel:+237612345678" class="footer-link">+33 6 12 34 56 78</a></li>
+                        <li><a href="mailto:stakyramategne@gmail.com" class="footer-link">stakyramategne@gmail.com</a></li>
+                        <li><a href="tel:+33612345678" class="footer-link">+33 6 12 34 56 78</a></li>
                         <li>ANGERS - FRANCE</li>
                     </ul>
                 </div>
@@ -193,8 +173,5 @@
     </a>
 
     <script src="js/common.js"></script>
-    <script src="js/adout.js"></script>
-
-
-</body>
+    <script src="js/about.js"></script> </body>
 </html>
